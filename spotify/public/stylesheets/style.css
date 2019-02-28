@@ -6,3 +6,64 @@ body {
 a {
   color: #00B7FF;
 }
+
+body{
+  padding: 0px;
+  background-image: url("../images/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-section{
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 40%;
+  border-radius: 20px;
+  margin-top: 200px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 30%;
+}
+.index-section, h1, p{
+  text-align: center;
+  padding-bottom: 10px;
+}
+.search {
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+}
+.search input{
+  width: 50%;
+  height: 20px;
+  border-color: black;
+}
+.search button {
+  margin-top: 10px;
+  padding: 10px 20px 10px 20px;
+  background-color: rgb(132, 143, 4);
+  -webkit-box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.4); 
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.4);
+  border-radius: 5px;
+  font-weight: 600;
+  border-color: black;
+}
+.search button:hover{
+  cursor: pointer;
+}
+.album-container{
+  width: 100%;
+  margin: 40px;
+  display:flex;
+  flex-wrap: wrap;
+}
+.albums {
+  width: 10%;
+  margin: 0 10px;
+  padding-bottom: 30px;
+}
+img {
+  display:block;
+  height: 200px;
+  margin: 0 auto;
+  padding: 10px;
+}

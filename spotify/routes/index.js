@@ -30,16 +30,29 @@ router.get('/artists', async (req, res, next) => {
   const { search } = req.query;
   try {
     const data = await spotifyApi.searchArtists(search);
-    console.log(data.body.artists.items[0].images[0].url);
-
+    // console.log(data.body.artists.items[0].images[0].url);
     res.render('artists', { artists: data.body.artists.items }); // { data: data }
   } catch (error) {
     console.log('The error while searching artists occurred: ', error);
   }
 });
 
+router.get('/albums/:id', async (req, res, next) => {
+  const { id } = req.params; // 3WrFJ7ztbogyGnTHbHJFl2
+
+  try {
+    console.log(id);
+    const albums = await spotifyApi.getArtistAlbums('4r7GFgk8H9WJAdbuDA1g3J');
+    console.log(albums);
+  } catch (error) {
+    console.log('The error while searching artists occurred: ', error);
+  }
+  next();
+});
+
 module.exports = router;
 
+// ITEMS
 // { external_urls:
 //   { spotify: 'https://open.spotify.com/artist/1YEGETLT2p8k97LIo3deHL' },
 //  followers: { href: null, total: 121393 },

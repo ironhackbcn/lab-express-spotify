@@ -26,13 +26,11 @@ router.get('/', (req, res, next) => {
   spotifyApi.searchArtists(artist)
     .then(data => {
       console.log(data.body.albums);
-      res.render('artists', { artists: data.body.artists.items });  
+      res.render('artists', { artists: data.body.artists.items });
     })
     .catch(err => {
       console.log('The error while searching artists occurred: ', err);
     });
 });
-
-
 
 module.exports = router;

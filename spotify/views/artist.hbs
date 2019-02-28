@@ -1,0 +1,10 @@
+<h1>Artist:</h1>
+
+<ul>
+  {{#each artist}}
+    <li>
+      <p>{{this.name}}</p>
+      <img src="{{this.images.0.url}}" alt="{{this.name}}" />
+    </li>
+  {{/each}}
+</ul>

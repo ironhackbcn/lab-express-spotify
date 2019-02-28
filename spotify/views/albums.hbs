@@ -1,10 +1,10 @@
-<h1>Artist:</h1>
+<h1>Albums</h1>
 
 <ul>
-  {{#each artist}}
+  {{#each albums}}
     <li>
       <p>{{this.name}}</p>
-      <a href="/albums/{{this.id}}">View Albums</a>
+      <a href="/tracks/{{this.id}}">View tracks</a>
       <img src="{{this.images.0.url}}" alt="{{this.name}}" />
     </li>
   {{/each}}

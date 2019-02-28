@@ -1,11 +1,24 @@
 const createError = require('http-errors');
 const express = require('express');
+const router = express.Router();
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
+const artistsRouter = require('./routes/artists');
+
+const hbs = require('hbs');
+const SpotifyWebApi = require('spotify-web-api-node');
+
+// setting the spotify-api goes here:
+const clientId = '58d7562620754b3db964fe679006deb9';
+const clientSecret = '054705687cb7471d8910063db87811c9';
+
+const spotifyApi = new SpotifyWebApi({
+  clientId: clientId,
+  clientSecret: clientSecret
+});
 
 const app = express();
 
@@ -20,7 +33,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/artists', artistsRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

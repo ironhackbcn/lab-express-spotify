@@ -4,8 +4,9 @@
   {{#each albums}}
     <li>
       <p>{{this.name}}</p>
+      {{!-- 'images.1' acces array images, index 1 --}}
+      <img src="{{this.images.1.url}}" alt="{{this.name}}" />
       <a href="/tracks/{{this.id}}">View tracks</a>
-      <img src="{{this.images.0.url}}" alt="{{this.name}}" />
     </li>
   {{/each}}
 </ul>

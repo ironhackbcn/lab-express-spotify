@@ -38,29 +38,26 @@ router.get('/artists', async (req, res, next) => {
 });
 
 router.get('/albums/:id', async (req, res, next) => {
-  const { id } = req.params; // 3WrFJ7ztbogyGnTHbHJFl2
-
+  const { id } = req.params;
   try {
-    console.log(id);
-    const albums = await spotifyApi.getArtistAlbums('4r7GFgk8H9WJAdbuDA1g3J');
-    console.log(albums);
+    const albums = await spotifyApi.getArtistAlbums(id);
+    console.log(albums.body.items);
+    res.render('albums', { albums: albums.body.items });
   } catch (error) {
     console.log('The error while searching artists occurred: ', error);
   }
-  next();
+});
+
+router.get('/tracks/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    console.log(id);
+    const tracks = await spotifyApi.getAlbumTracks(id);
+    console.log(tracks.body.items);
+    res.render('tracks', { tracks: tracks.body.items });
+  } catch (error) {
+    console.log('The error while searching artists occurred: ', error);
+  }
 });
 
 module.exports = router;
-
-// ITEMS
-// { external_urls:
-//   { spotify: 'https://open.spotify.com/artist/1YEGETLT2p8k97LIo3deHL' },
-//  followers: { href: null, total: 121393 },
-//  genres: [ 'canadian rock', 'pop rock' ],
-//  href: 'https://api.spotify.com/v1/artists/1YEGETLT2p8k97LIo3deHL',
-//  id: '1YEGETLT2p8k97LIo3deHL',
-//  images: [ [Object], [Object], [Object], [Object] ],
-//  name: 'Crash Test Dummies',
-//  popularity: 55,
-//  type: 'artist',
-//  uri: 'spotify:artist:1YEGETLT2p8k97LIo3deHL' },

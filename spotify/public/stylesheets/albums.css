@@ -1,16 +1,16 @@
-.artists-container {
+.albums-container {
   display: flex;
   flex-wrap: wrap;
   width: 960px;
   margin: 0 auto;
 }
 
-.artists {
+.albums {
   display: flex;
   flex-direction: column;
-
-  text-align: center;
+  width: 300px;
   background-color: #636e72;
+  text-align: center;
   margin: 10px;
 }
 
@@ -18,12 +18,17 @@ h1 {
   text-align: center;
 }
 
-p {
+.albums img {
+  width: 300px;
+}
+
+.albums p {
   color: white;
+  width: 270px;
   font-weight: bold;
 }
 
-a {
+.albums a {
   background-color: crimson;
   color: white;
   width: 120px;

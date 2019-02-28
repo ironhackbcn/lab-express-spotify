@@ -36,8 +36,17 @@ router.get('/artists', (req, res, next) => {
     });
 });
 
-router.get('/albums/:id', (req, res, next) => {
-  res.render('albums');
+router.get('/artists/:id/albums', (req, res, next) => {
+  const { id } = req.params;
+  console.log(id);
+  spotifyApi.getArtistAlbums(id)
+    .then(data => {
+      console.log(data.body.items[0].images);
+      res.render('albums', { albums: data.body.items });
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 module.exports = router;

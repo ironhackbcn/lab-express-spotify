@@ -35,26 +35,21 @@ router.get('/albums/:id', async (req, res, next) => {
 
   try {
     const albums = await spotifyApi.getArtistAlbums(id);
-    console.log(albums.body.items);
     res.render('albums', { albums: albums.body.items });
   } catch (error) {
     next(error);
   }
 });
 
-// .getArtistAlbums() code goes here
-// router.get('/albums/:artistId', async (req, res, next) => {
-//   const { id } = req.params;
-//   try {
-//     const artistArray = await spotifyApi.getArtistAlbums(id);
-//     if (artistArray.statusCode >= 400 && artistArray.statusCode <= 500) {
-//       next();
-//       return;
-//     }
-//     res.render('albums', { artist: artistArray[0] });
-//   } catch (error) {
-//     next(error);
-//   }
-// });
+router.get('/tracks/:id', async (req, res, next) => {
+  const { id } = req.params;
+  try {
+    const tracks = await spotifyApi.getAlbumTracks(id);
+    console.log(tracks.body);
+    res.render('tracks', { tracks: tracks.body.items });
+  } catch (error) {
+    next(error);
+  }
+});
 
 module.exports = router;

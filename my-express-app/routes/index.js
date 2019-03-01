@@ -27,7 +27,7 @@ router.get('/artists', (req, res, next) => {
 
   spotifyApi.searchArtists(artist)
     .then(data => {
-      console.log(data.body.artists.items[0]);
+      // console.log(data.body.artists.items[0]);
       const artists = data.body.artists;
       res.render('artists', { artists });
     })
@@ -38,11 +38,23 @@ router.get('/artists', (req, res, next) => {
 
 router.get('/artists/:id/albums', (req, res, next) => {
   const { id } = req.params;
-  console.log(id);
+  // console.log(id);
   spotifyApi.getArtistAlbums(id)
     .then(data => {
-      console.log(data.body.items[0].images);
+      // console.log(data.body.items);
       res.render('albums', { albums: data.body.items });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+router.get('/artists/albums/:tracks', (req, res, next) => {
+  const { tracks } = req.params;
+  spotifyApi.getAlbumTracks(tracks)
+    .then(data => {
+      console.log(data.body);
+      res.render('tracks', { tracks: data.body.items });
     })
     .catch(err => {
       console.log(err);

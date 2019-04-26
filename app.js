@@ -4,7 +4,18 @@ const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
 
-// Remember to insert your credentials here
+
+
+
+
+const app = express();
+
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
+
+
+// setting the spotify-api goes here:
 const clientId = 'a745883dad764aa78792b9306eaddefd',
     clientSecret = '5934fadd9a25444f8f2575c82393a288';
 
@@ -21,18 +32,6 @@ spotifyApi.clientCredentialsGrant()
   .catch(error => {
     console.log('Something went wrong when retrieving an access token', error);
   })
-
-
-
-const app = express();
-
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
-
-
-// setting the spotify-api goes here:
-
 
 
 

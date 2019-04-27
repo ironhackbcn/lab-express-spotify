@@ -65,6 +65,23 @@ app.get('/artists/:id/albums',(req,res)=>{
   })
 })
 
+
+app.get('/albums/:id/tracks',(req,res)=>{
+
+  const {id} = req.params;
+  console.log(id);
+  
+  spotifyApi.getAlbumTracks(id) // passing id in params
+  .then(data => {
+    console.log("The received data from the API: ", data.body);
+    const tracks = {data}; 
+    res.render('tracks',{tracks:data.body});
+  })
+  .catch(err => {
+    console.log("The error while searching artists occurred: ", err);
+  })
+})
+
 app.get('/artists',(req,res)=>{
   res.render('artists');
 })

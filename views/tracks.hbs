@@ -1,0 +1,9 @@
+<div class="index-container">
+  <div class="grid-artists">
+    {{#each tracks.items}}
+    <h1>{{this.name}}</h1>
+    <audio controls>
+      <source src="{{this.preview_url}}">
+    </audio>    {{/each}}
+    </div>
+</div>

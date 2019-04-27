@@ -1,0 +1,9 @@
+<div class="index-container">
+  <div class="grid-artists">
+    {{#each data.body.artists.items}}
+    <h1>{{this.name}}</h1>
+    <img src={{this.images.0.url}}>
+    <a href="/artists/{{this.id}}/albums"><button>See more</button></a>
+    {{/each}}
+    </div>
+</div>

@@ -1,0 +1,125 @@
+.bodyArtists { 
+  background-image: url("./../images/Konzert_KeyVisual_Events.1551435000891.jpeg");
+  background-size: cover;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.whitebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 60vw;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.52);
+}
+
+.search {
+  width: 40vw;
+  margin-bottom: 20px;
+}
+
+button {
+  align-self: center;
+  background-color: red;
+}
+
+h1{
+  margin: 50px;
+  color: #F1F3F4;
+  font-size: 50px;
+}
+
+.tracks{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+
+.tableCenter{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right{
+  text-align: right;
+  align-content: right;
+}
+
+th{
+  font-size: 25px;
+  padding-right: 40px;
+}
+
+thead{
+  background-color: #1DD760;
+  color: #F1F3F4;
+}
+
+.bodyTracks{
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(93, 92, 92, 0.692) 0%, rgb(29, 29, 29) 70%)}
+
+
+
+  td#rowCenter{
+    color: #F1F3F4;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.bodyArtistsFile{
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: linear-gradient(to bottom, rgba(93, 92, 92, 0.692) 0%, rgb(29, 29, 29) 70%);
+  }
+
+
+  .divArtistsFile{
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
+  .imgArtistsFile{
+    height: 300px;
+  }
+
+  .artistsFlex{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 40px;
+    height: 300px;
+  }
+
+  .artistsFlex p{
+    font-size: 20px;
+  }

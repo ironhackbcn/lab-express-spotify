@@ -1,0 +1,7 @@
+<div class="artist-container">
+    {{#each albums}}
+      <div class="card-template">{{> albumCard this}}</div>
+      {{else}}
+        <p>There are no albums</p>
+    {{/each}}
+</div>

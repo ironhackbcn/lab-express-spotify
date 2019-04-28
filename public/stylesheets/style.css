@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,900');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(32, 32, 32);
+}
+form{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input{
+  height: 50px;
+  border:none;
+  border-radius:10px;
+  margin: 0 10px;
+}
+input[type="text"]{
+  width: 50vw;
+  padding: 0 0 0 20px;
+}
+input[type="submit"]{
+  width: 30vw;
+  background-color: aquamarine;
+  color: black;
+}
+.form-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+
+}
+.form-wrapper{
+  padding: 3%;
+  background: rgba(255,255,255,0.5);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  
+}
+.artist-container{
+  position: relative;
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+ align-items: flex-start;
+ flex-wrap: wrap;
+}
+.card-template{
+  width: 33%;
+  padding: 2%;
+  transition:all 500ms;
+}
+.card-template-track{
+  width: 100%;
+  padding: 1%;
+  transition:all 500ms;
+}
+.card-template-track audio{
+  width: 80%;
+}
+.card-template-track .card-body{
+  margin:0px 0px 20px 0px;
+}
+.card{
+  position: relative;
+  overflow: hidden;
+  background-color:rgba(255,255,255,0.1);
+  border-radius: 10px;
+  color:white;
+  text-align: center;
+}
+.card-img-wrapper{
+  position: relative;
+  height: 40vh;
+  width: 40vh;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+}
+.card-body{
+  margin: 30px 0;
+}
+.card-body button{
+  border:none;
+  background-color: aquamarine;
+  color: black;
+  width: 70%;
+  height: 60px;
+  border-radius:10px;
+  cursor: pointer;
+  transition:all 300ms;
+}
+.card-body button:hover{
+  transform: translateY(-5px);
+}

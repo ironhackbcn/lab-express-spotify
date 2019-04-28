@@ -32,6 +32,7 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   })
 
+  
 const clientIdUnsplash = 'ecf45ba12e1f2b8e0392ecc96f161df4f3b7ad09da78d01e480cc005db05d2a3'; //this is required to verify your application's requests
   unsplash.init(clientIdUnsplash);
 // the routes go here:

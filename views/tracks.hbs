@@ -1,0 +1,7 @@
+<div class="artist-container">
+    {{#each tracks}}
+      <div class="card-template">{{> trackCard this}}</div>
+      {{else}}
+        <p>There are no tracks</p>
+    {{/each}}
+</div>

@@ -1,0 +1,8 @@
+<div class="artist-container">
+    {{#each artists}}
+      <div class="card-template">{{> artistCard this}}</div>
+      {{else}}
+        <p>There are no artists</p>
+    {{/each}}
+  
+</div>

@@ -37,7 +37,7 @@ const clientIdUnsplash = 'ecf45ba12e1f2b8e0392ecc96f161df4f3b7ad09da78d01e480cc0
 // the routes go here:
 
 app.get('/', (req,res) => {
-  unsplash.searchPhotos('music', null, null, null, function(error, photos, link) {
+  unsplash.searchPhotos('concert', null, null, null, function(error, photos, link) {
     const randomPhotoIndex = Math.floor(Math.random()*10);
     console.log(randomPhotoIndex)
     const photo = {

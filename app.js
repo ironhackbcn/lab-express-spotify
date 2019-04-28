@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const unsplash = require('unsplash-api');
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -30,11 +31,22 @@ spotifyApi.clientCredentialsGrant()
   .catch(error => {
     console.log('Something went wrong when retrieving an access token', error);
   })
+
+const clientIdUnsplash = 'ecf45ba12e1f2b8e0392ecc96f161df4f3b7ad09da78d01e480cc005db05d2a3'; //this is required to verify your application's requests
+  unsplash.init(clientIdUnsplash);
 // the routes go here:
 
 app.get('/', (req,res) => {
-  res.render('index')
-})
+  unsplash.searchPhotos('music', null, null, null, function(error, photos, link) {
+    const randomPhotoIndex = Math.floor(Math.random()*10);
+    console.log(randomPhotoIndex)
+    const photo = {
+      photo: photos[randomPhotoIndex].urls
+    }
+    console.log(photo)
+    res.render('index',photo)
+    });
+  });
 
 app.get('/artists', (req,res) => {
   spotifyApi.searchArtists(req.query.artist)
@@ -60,8 +72,6 @@ app.get('/albums/:artistId', (req, res, next) => {
     console.log('Something went wrong!', err);
   });
 });
-
-
 
 app.get('/tracks/:albumId', (req, res, next) => {
   spotifyApi.getAlbumTracks(req.params.albumId)

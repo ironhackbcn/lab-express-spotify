@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+  <title>Tracks</title>
+</head>
+<body>
+  
+</body>
+</html>
+<div class="index-container">
+  <div class="tracks">
+    {{#each tracks.items}}
+    <h1>{{this.name}}</h1>
+    <audio controls>
+      <source src="{{this.preview_url}}">
+    </audio>    {{/each}}
+    </div>
+</div>

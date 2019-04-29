@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+  <title>Artists</title>
+</head>
+
+<body>
+  <div class="index-container">
+    <h1>Found artists</h1>
+      {{#each data.body.artists.items}}
+    <div class="cell-artists">
+      <h4>{{this.name}}</h4>
+       <br>
+      <img src={{this.images.0.url}}>
+      <br>
+      <a href="/artists/{{this.id}}/albums"><button>See more</button></a>
+    </div>
+      {{/each}}
+  </div>
+</body>
+
+</html>

@@ -1,1 +1,13 @@
-<h1>Welcome to {{title}}</h1>
+<Section class="search-box">
+    <form method="GET" action="/serch">
+        <input class="text-truncate" type="text" name="artist" id="artist" placeholder="Write the artist name">
+        <button class= "search-input" type="submit">Serch</button>
+    </form>
+</Section>
+<section class="cards">
+{{#each items}}
+<a href="/albums/{{id}}"><section class="card">
+    <img src="{{images}}" alt="{{name}}">
+</section></a>
+{{/each}}
+</section>

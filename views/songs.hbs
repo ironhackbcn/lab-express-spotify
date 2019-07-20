@@ -1,0 +1,15 @@
+<section class="cards">
+{{#each items}}
+<section class="truck-text">
+    <h1 class="song">{{name}}</h1>
+    <figure>
+    <audio
+        controls
+        src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+</section>
+{{/each}}
+</section>

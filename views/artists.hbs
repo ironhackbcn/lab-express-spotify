@@ -1,0 +1,10 @@
+<h1>Artists page</h1>
+{{#each body.artists.items}}
+<article>
+<img src={{images.0.url}}>
+<p>{{name}}</p>
+<button><a href="/albums/{{id}}">View albums</a>
+</button>
+
+</article>
+{{/each}}

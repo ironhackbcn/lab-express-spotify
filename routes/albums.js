@@ -23,16 +23,15 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   });
 
-router.get('/', async (req, res, next) => {
+router.get('/:artistId', async (req, res, next) => {
   try {
-    const searchArtist = req.query.search; // what the user's looking for
-    const artist = await spotifyApi.searchArtists(searchArtist);
-    // console.log('The received data from the API: ', artist.body.artists.items);
-    res.render('artists.hbs', artist);
+    const id = req.params.artistId; // name after req.params.NAME - has to be the same as in the path above!
+    const albums = await spotifyApi.getArtistAlbums(id);
+    console.log(albums);
+    // res.render('albums.hbs', albums)
   } catch (error) {
     next(error);
-    // console.log('The error while searching artists occurred: ', err);
-  };
+  }
 });
 
 module.exports = router;

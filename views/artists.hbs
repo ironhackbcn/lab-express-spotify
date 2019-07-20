@@ -1,1 +1,30 @@
 <h1>Artists page</h1>
+<section>
+  <ul>
+  {{#each this.body.artists.items}}
+    <li>
+      <img src="{{images.0.url}}" alt="an album cover">
+      <h2>{{name}}</h2>
+      <a href="/albums/{{id}}">View Albums</a>
+    </li>
+  {{/each}}
+</ul>
+</section>
+
+
+
+
+
+<ul>
+  {{#each recipes}}
+    <li>
+      <a href="/recipes/details/{{_id}}">
+        <p>{{title}}</p>
+        <p>{{duration}}</p>
+      </a>
+    </li>
+  {{/each}}
+</ul>
+
+<button onclick="location.href='http://www.example.com'" type="button">
+         www.example.com</button>

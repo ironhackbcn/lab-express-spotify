@@ -28,7 +28,8 @@ spotifyApi.clientCredentialsGrant()
   });
 
 const indexRouter = require('./routes/index');
-const artistsRouter = require('./routes/artists');
+const artistsRouter = require('./routes/artists'); // ------> artistRouter here.
+const albumsRouter = require('./routes/albums');
 
 const app = express();
 
@@ -46,6 +47,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); // when user puts '/', execute indexRouter
 app.use('/artists', artistsRouter); // when user puts
+app.use('/albums', albumsRouter);
 
 // -- 404 and error handler
 

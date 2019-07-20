@@ -1,42 +1,62 @@
-const createError = require('http-errors');
+'use stric';
+
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const hbs = require('hbs');
+const SpotifyWebApi = require('spotify-web-api-node');
 
-// require spotify-web-api-node package here:
+const clientId = '58206d77dca14d329b64d6d74b1d5a7d';
+const clientSecret = '968837a0664f4747b145e2bcd8e69d74';
+
+const spotifyApi = new SpotifyWebApi({
+  clientId: clientId,
+  clientSecret: clientSecret
+});
+
+// Retrieve an access token
+spotifyApi.clientCredentialsGrant()
+  .then(data => {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  })
+  .catch(error => {
+    console.log('Something went wrong when retrieving an access token', error);
+  });
 
 const indexRouter = require('./routes/index');
+const artistsRouter = require('./routes/artists');
 
- const app = express();
+const app = express();
 
- // view engine setup
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
 
- app.use(logger('dev'));
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
- app.use('/', indexRouter);
+app.use('/', indexRouter);
+app.use('/artists', artistsRouter);
 
- // catch 404 and forward to error handler
+// -- 404 and error handler
+
 app.use((req, res, next) => {
-  next(createError(404));
+  res.status(404);
+  res.render('not-found');
 });
 
- // error handler
 app.use((err, req, res, next) => {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+  console.error('ERROR', req.method, req.path, err);
 
-   // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  if (!res.headersSent) {
+    res.status(500);
+    res.render('error');
+  }
 });
 
- module.exports = app;
+module.exports = app;

@@ -22,11 +22,13 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   });
 
-router.get('/', async (req, res, next) => {
+router.get('/:artistId', async (req, res, next) => {
+  console.log('eeeeeiiii');
   try {
-    const searchTerm = req.query.search; // en req.query recibimos la info del formulario si su método es GET
-    const artists = await spotifyApi.searchArtists(searchTerm);
-    res.render('artists', artists);
+    const artistId = req.params.artistId;
+    const albums = await spotifyApi.getArtistAlbums(artistId);
+    // console.log(albums.body.items[0]);
+    res.render('albums', albums);
   } catch (error) {
     next(error);
   }

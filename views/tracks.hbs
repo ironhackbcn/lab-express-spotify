@@ -1,0 +1,21 @@
+<h1>fkjhvje</h1>
+<h1>Artists page</h1>
+{{#each body.items}}
+<ul>
+  <li>
+<p>{{name}}</p>
+  </li>
+  <li>
+    <audio controls>
+  <source src={{preview_url}} type="audio/mpeg"> 
+  <p>Your browser doesn't support HTML5 audio. Here is
+     a <a href="myAudio.mp4">link to the audio</a> instead.</p>
+</audio>
+  </li>
+</ul>
+
+
+
+
+</article>
+{{/each}}

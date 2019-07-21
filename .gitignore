@@ -28,3 +28,6 @@ desktop.ini
 
 # dotenv
 .env
+
+#API keys
+APIKeys.json

@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #ff6666;
+  --red: #ff6666;
   --black: #222326;
   --gray: #4d4d4d;
   --smoke: #f1f3f4;
@@ -26,7 +26,7 @@ body {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--red);
 }
 
 h1,
@@ -66,8 +66,8 @@ li {
 
 .btn {
   color: white;
-  background: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background: var(--red);
+  border: 1px solid var(--red);
   cursor: pointer;
   margin-top: 12px;
   padding: 10px 20px;
@@ -75,7 +75,7 @@ li {
 }
 
 .btn:hover {
-  color: var(--primary-color);
+  color: var(--red);
   background: white;
   transition: all 0.15s ease-in-out;
 }
@@ -170,8 +170,8 @@ li {
 
 .card-btn {
   color: white;
-  background: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  background: var(--red);
+  border: 1px solid var(--red);
   cursor: pointer;
   border-radius: 6px;
   margin-top: auto;
@@ -229,6 +229,12 @@ li {
   color: #9e9e9e;
   padding: 17px 0;
   margin-right: 25px;
+}
+
+.not-found {
+  color: var(--red);
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media (min-width: 480px) {

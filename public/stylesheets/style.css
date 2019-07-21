@@ -25,66 +25,93 @@
   color: var(--primary-color);
   text-align: center;
 }
-
- a {
-  color: var(--primary-color);
+h2{
+text-align: center;
 }
 
- ul, li{
-  margin: 0;
-  padding: 0;
+ .main-container {
+  background: url("../images/anthony-delanoix-hzgs56Ze49s-unsplash.jpg");
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+.search-container {
+
+  padding: 5%;
+  background: #ffffff69;
 }
 
- li{
-  list-style: none;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
 }
 
- .text-truncate {
-  max-width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+input {
+  font-size:20px;
+  padding:4%;
 }
 
- section, article {
-  margin-bottom: 20px;
-  padding-top: 20px;
+.button-submit{
+  font-size: 20px;
+  background: #c84f4f;
+  border: none;
+  color: white;
+  padding: 5%;
+  cursor: pointer;
 }
 
- .container {
-  margin: 0 auto;
-  max-width: 1024px;
-}
-
- .search-box{
+.search-box{
   display: flex;
   justify-content: center;
 }
 
- .search-input{
+.search-input{
   margin-right: 2rem;
 }
 
- .btn{
-  color: var(--white);
-  background: var(--primary-color);
-  padding: 0.75rem 3rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 500px;
-  cursor: pointer;
-}
-
- .cards{
-  display: flex;
-  flex-direction: row;
+.container {
+  padding: 3%;
+  display:flex;
   flex-wrap: wrap;
+  justify-content: center;
+
 }
 
- .card{
+.container div {
+  background: #595858;
+  color: white;
+  width: 300px;
+  margin: 2%;
+  padding: 0% 0 4%;
   display: flex;
   flex-direction: column;
-  padding: 1rem 0.75rem;
+  align-items: center;
 }
+
+.container div img {
+  width: 300px;
+}
+
+a {
+  text-decoration: none;
+  background: #c84f4f;
+  border: none;
+  color: white;
+  padding: 5%;
+}
+
+.tracks-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

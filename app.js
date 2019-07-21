@@ -8,6 +8,8 @@ const hbs = require('hbs');
 
 const indexRouter = require('./routes/index');
 const artistsRouter = require('./routes/artists');
+const albumsRouter = require('./routes/albums');
+const tracksRouter = require('./routes/tracks');
 
 const app = express();
 
@@ -25,6 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Controllers
 app.use('/', indexRouter);
 app.use('/artists', artistsRouter);
+app.use('/albums', albumsRouter);
+app.use('/tracks', tracksRouter);
 
 // -- 404 and error handler
 app.use((req, res, next) => {

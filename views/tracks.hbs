@@ -1,0 +1,21 @@
+<h1>Albums for {{tracks.title}}</h1>
+<div class="tracks-container">
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Listen</th>
+      </tr>
+      {{#each tracks.albumTracks}}
+      <tr>
+        <td>{{name}}</td>
+        <td>
+          <audio controls>
+            <source src={{preview_url}} type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+          </audio>
+        </td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>

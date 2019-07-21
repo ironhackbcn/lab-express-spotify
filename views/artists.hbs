@@ -1,11 +1,10 @@
-<h1>Welcome to artists</h1>
-<ul>
+<section class="cards">
   {{#each artist}}
-    <section>
+     <article class="card">
       <img src="{{this.images.1.url}}" alt="{{this.name}}">
       <h2>{{this.name}}</h2>
       <a href="/albums/{{this.id}}">View Album</a>
-    </section>
-    
+    </article>
 {{/each}}
-</ul>
+</section>
+

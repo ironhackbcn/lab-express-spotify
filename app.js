@@ -9,6 +9,7 @@ const hbs = require('hbs');
 const indexRouter = require('./routes/index');
 const artistRouter = require('./routes/artists');
 const albumRouter = require('./routes/albums');
+const trackRouter = require('./routes/tracks');
 
 const app = express();
 
@@ -16,6 +17,7 @@ const app = express();
 app.use('/', indexRouter);
 app.use('/artists', artistRouter);
 app.use('/albums', albumRouter);
+app.use('/tracks', trackRouter);
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));

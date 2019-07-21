@@ -1,5 +1,5 @@
 <section>
-  <h1>Albums:</h1>
+  <h1>Albums</h1>
   <ul class="cards">
     {{#each albums}}
       <article>
@@ -8,7 +8,7 @@
           <img src="{{this.images.1.url}}" alt="{{this.name}}">
           <div class="grey-bg">
             <p class="text-truncate">{{this.name}}</p>
-            <button href="/tracks/{{this.id}}">View Tracks</button>
+            <a class = "button" href="/tracks/{{this.id}}">View Tracks</a>
           </div>
         </li>
       </article>

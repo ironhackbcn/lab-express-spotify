@@ -3,10 +3,12 @@
   <h1>Tracks</h1>
   <ul>
     {{#each tracks}}
-    <article>
+    <article class="article-tracks">
       <li>
-        <p>{{this.name}}</p>
-        <audio src="{{this.preview_url}}" controls></audio>
+        <div class="grid-wrapper">
+            <p class = "song-name">{{this.name}}</p>
+            <audio class = "audio-controls" src="{{this.preview_url}}" controls></audio>
+        </div>
       </li>
     </article>
     {{/each}}

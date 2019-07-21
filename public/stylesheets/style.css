@@ -24,6 +24,7 @@
  h1{
   color: var(--primary-color);
   text-align: center;
+  font-size: 50px;
 }
 
  a {
@@ -87,7 +88,33 @@
   display: flex;
   flex-direction: column;
   padding: 1rem 0.75rem;
-}
+  align-items: stretch;
+ }
+
+ .song-name{
+   grid-area: song;
+   text-align: start;
+ }
+
+ .audio-control{
+   grid-area: audio;
+ }
+
+ .grid-wrapper{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "song audio";
+    justify-items: center;
+    background-color: rgb(241, 242, 243);
+
+ }
+
+ .article-tracks{
+   margin: 0 10px; 
+   padding: 0;
+ }
 
 .grey-bg{
   background-color: gray;
@@ -95,11 +122,12 @@
   color: white;
 }
 
-.grey-bg p,button{
+.grey-bg p,.button{
   margin: 0;
 }
 
-.grey-bg button{
+a.button{
+  appearance: button;
   color: white;
   padding: 0.2rem 1rem;
   font-weight: 600;
@@ -109,5 +137,6 @@
   border-radius: 700px;
   cursor: pointer;
   background: var(--primary-color);
-  margin-bottom: 5px;
+  font-size: 10px;
+  text-decoration: none;
 }

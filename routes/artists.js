@@ -9,10 +9,11 @@ router.get('/', async (req, res, next) => {
   console.log('\x1b[34m', `[APP] User searched for: ${searchInput}`);
   try {
     const data = await SpotifyWebApi.searchArtists(searchInput);
-    // console.log(data);
     const artists = data.body.artists.items;
-    res.render('artists', { artists });
-    console.log('\x1b[33m', '[OK] Artists loaded');
+    const total = !!data.body.artists.total;
+    console.log(total);
+    res.render('artists', { artists, total });
+    console.log('\x1b[33m', `[OK] ${data.body.artists.total} artists found`);
   } catch (error) {
     next(error);
   }

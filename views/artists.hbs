@@ -1,4 +1,6 @@
 <section id="artistsList">
+{{#if total}}
+
 {{#each artists}}
   <p>{{name}}</p>
   {{#if images.1.url}}
@@ -8,4 +10,9 @@
   {{/if}}
   <a href="/artists/{{id}}/albums">View albums</a>
 {{/each}}
+
+{{else}}
+<p>No artists found 😕</p>
+<a href="/">Try again with anoter keyword</a>
+{{/if}}
 </section>

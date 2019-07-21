@@ -1,0 +1,12 @@
+<h1>Artists page</h1>
+<section>
+  <ul>
+    {{#each this.body.artists.items}}
+    <li>
+      <img src="{{images.0.url}}" alt="an album cover">
+      <h2>{{name}}</h2>
+      <a href="/albums/{{id}}">View Albums</a>
+    </li>
+    {{/each}}
+  </ul>
+</section>

@@ -1,0 +1,12 @@
+<h1>Albums Page, bitch!</h1>
+<section>
+  <ul>
+    {{#each this.body.items}}
+    <li>
+      <img src="{{images.0.url}}" alt="">
+      <p>{{name}}</p>
+      <a href="/tracks/{{id}}">View Tracks</a>
+    </li>
+    {{/each}}
+  </ul>
+</section>

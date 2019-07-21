@@ -23,7 +23,6 @@ spotifyApi.clientCredentialsGrant()
   });
 
 router.get('/:albumId', async (req, res, next) => {
-  console.log('eeeeeiiii');
   try {
     const albumId = req.params.albumId;
     const tracks = await spotifyApi.getAlbumTracks(albumId);

@@ -1,20 +1,17 @@
-<h1>Tracks</h1>
 <section class="tracksList">
-  <ul>
-    <li>Title</li>
-    <li>Preview</li>
-    {{#each this.body.items}}
-    <li>
-      <p>{{name}}</p>
-    </li>
-    <li>
-      <audio controls>
-        <source src={{preview_url}} type="audio/mpeg">
-        <p>Your browser doesn't support HTML5 audio. Here is
-          a <a href={{preview_url}}>link to the audio</a> instead.</p>
-      </audio>
-    </li>
-      
-    {{/each}}
-  </ul>
+  <div class="container-tracks">
+    <ul class="tracksListUl">
+      <li><h1>Tracks list</h1></li>
+      {{#each this.body.items}}
+      <li>
+        <p>{{name}}</p>
+        <audio controls>
+          <source src={{preview_url}} type="audio/mpeg">
+          <p>Your browser doesn't support HTML5 audio. Here is
+            a <a href={{preview_url}}>link to the audio</a> instead.</p>
+        </audio>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
 </section>

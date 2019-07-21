@@ -2,6 +2,7 @@
 {{#if total}}
 
 {{#each artists}}
+<article>
   <p>{{name}}</p>
   {{#if images.1.url}}
     <img src="{{images.1.url}}" alt="{{name}} cover">
@@ -9,7 +10,9 @@
     <img src="/img/no_image_available.png" alt="No image available" cover>
   {{/if}}
   <a href="/artists/{{id}}/albums">View albums</a>
+</article>
 {{/each}}
+
 
 {{else}}
 <p>No artists found 😕</p>

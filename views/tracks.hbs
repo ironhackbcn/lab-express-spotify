@@ -1,12 +1,29 @@
-{{#each albumTracks}}
 <section id="tracksList">
-<p><span>{{track_number}}</span> {{name}}</p>
+  {{#each albumTracks}}
+  <p><span>{{track_number}}</span> {{name}}</p>
   {{#if preview_url}}
-    <audio controls controlsList="nodownload">
-      <source src="{{preview_url}}"></source>
-    </audio>
+    <audio class="audio" controls controlsList="nodownload" src="{{preview_url}}"></audio>
   {{else}}
     <p>Preview not available</p>
   {{/if}}
-</section>
 {{/each}}
+</section>
+
+<script>
+const container = document.getElementById('tracksList');
+function onlyPlayOneIn(container) {
+  container.addEventListener('play', function(event) {
+  audioElements = container.getElementsByTagName('audio')
+    for(i=0; i < audioElements.length; i++) {
+      audioElement = audioElements[i];
+      if (audioElement !== event.target) {
+        audioElement.pause();
+      }
+    }
+  }, true);
+};
+
+window.addEventListener('load', function() {
+  onlyPlayOneIn(container);
+});
+</script>

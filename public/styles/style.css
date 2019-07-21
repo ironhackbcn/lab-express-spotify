@@ -54,8 +54,8 @@
  .container {
   margin: 0 auto;
   max-width: 1024px;
-  display:flex;
-  justify-content:center;
+  /* display:flex;
+  justify-content:center; */
 }
 
  .search-box{
@@ -90,3 +90,24 @@
   flex-direction: column;
   padding: 1rem 0.75rem;
 }
+
+#homepage {
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-content:center;
+  flex-wrap:wrap;
+}
+#artistsList, #albumsList, #tracksList{
+  display:flex;
+  justify-content:center;
+  flex-direction:row;
+  align-content:center;
+  flex-wrap:wrap;
+}
+
+#artistsList article {
+  flex: 0 0 33.333333%;
+  text-align: center;
+}
+

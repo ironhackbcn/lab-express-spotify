@@ -1,0 +1,11 @@
+<h1>Albums</h1>
+
+<section>
+  {{#each albums}}
+    <article>
+      <a href="/tracks/{{this.id}}">
+        <p>{{this.name}}</p>
+      </a>
+    </article>
+  {{/each}}
+</section>

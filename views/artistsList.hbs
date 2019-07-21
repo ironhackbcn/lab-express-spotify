@@ -1,0 +1,12 @@
+<h1>Artists</h1>
+
+<section>
+  {{#each artists}}
+    <article>
+      <a href="/albums/{{this.id}}">
+        <p>{{this.name}}</p>
+        <p>{{this.id}}</p>
+      </a>
+    </article>
+  {{/each}}
+</section>

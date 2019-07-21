@@ -1,0 +1,11 @@
+<h1>Tracks Page</h1>
+<section>
+  <ul>
+    {{#each this.body.items}}
+      <li>
+        <p>{{name}}</p>
+        <audio controls src={{preview_url}}>Play this buoi!</audio>
+      </li>
+    {{/each}}
+  </ul>
+</section>

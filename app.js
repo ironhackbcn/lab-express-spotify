@@ -27,9 +27,10 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   });
 
-const indexRouter = require('./routes/index');
-const artistsRouter = require('./routes/artists'); // ------> artistRouter here.
-const albumsRouter = require('./routes/albums');
+const indexRouter = require('./routes/index.js');
+const artistsRouter = require('./routes/artists.js'); // ------> artistRouter here.
+const albumsRouter = require('./routes/albums.js');
+const tracksRouter = require('./routes/tracks.js');
 
 const app = express();
 
@@ -48,6 +49,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter); // when user puts '/', execute indexRouter
 app.use('/artists', artistsRouter);
 app.use('/albums', albumsRouter);
+app.use('/tracks', tracksRouter);
 
 // -- 404 and error handler
 

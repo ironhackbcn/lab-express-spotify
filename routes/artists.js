@@ -25,11 +25,10 @@ spotifyApi.clientCredentialsGrant()
 
 router.get('/', async (req, res, next) => {
   try {
-    const searchArtist = req.query.search; // what the user's looking for
-    const artist = await spotifyApi.searchArtists(searchArtist);
-    // console.log('The received data from the API: ', artist.body.artists.items);
-    console.log(artist);
-    // res.render('artists.hbs', artist);
+    const searchTerm = req.query.search; // what the user's looking for
+    const artist = await spotifyApi.searchArtists(searchTerm);
+    // console.log(artist.body.artists);
+    res.render('artists.hbs', artist);
   } catch (error) {
     next(error);
   };

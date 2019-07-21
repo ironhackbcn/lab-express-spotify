@@ -30,13 +30,13 @@ a {
   color: var(--primary-color);
 }
 
-/*.text-truncate {
+.text-truncate {
   max-width: 18.75rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-*/
+
 section, article {
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;
@@ -47,7 +47,7 @@ section, article {
   flex-flow: column nowrap;
 }
 
-label {
+.hidden-label {
   visibility: hidden;
   height: 0;
   width: 0;
@@ -88,7 +88,7 @@ label {
 .search-results-title {
   color: var(--white);
   align-self: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .search-again {
@@ -118,7 +118,7 @@ label {
   width: auto;
   display: flex;
   flex-flow: column wrap;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 
 .card-image {
@@ -133,4 +133,9 @@ label {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
+}
+
+.card-artist,
+.card-album {
+  max-width: 11.25rem;
 }

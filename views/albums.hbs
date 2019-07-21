@@ -2,7 +2,11 @@
   {{#each this.body.items}}
   <a href="/tracks/{{id}}">
     <article class="albumCard">
+      {{#if images}}
       <img src= {{images.0.url}}>
+      {{else}}
+      <img src= "./images/667793-PPH8XD-2.jpg">
+      {{/if}}
       <p>{{name}}</p>
       <div class="button">View tracks</div>
     </article>

@@ -19,72 +19,203 @@
   line-height: 147%;
   margin: 0;
   padding: 0;
+  background-image: url('../images/197.gif');
+  background-color:rgb(32, 32, 32); 
+  background-attachment: fixed;
 }
 
  h1{
-  color: var(--primary-color);
+  color: #8380f5;
   text-align: center;
+  letter-spacing: 2px;
+  font-size: 3em;
+  line-height: initial;
+  text-align: left;
+  font-family: 'Gilda Display', serif;
 }
 
- a {
-  color: var(--primary-color);
+a{
+  text-decoration: none;
 }
 
- ul, li{
-  margin: 0;
-  padding: 0;
+input{
+  width: 100%;
+  background-color: #121212;
+  outline: none;
+  color: rgb(255, 255, 255);
+  padding: 28px;
+  border: 0;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: #0c0c0c 0 0 30px;
+  font-weight: 200;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: 2px;
 }
 
- li{
-  list-style: none;
+::placeholder {
+  color: #ffffff3b;
 }
 
- .text-truncate {
-  max-width: 300px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+
+body {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
 }
 
- section, article {
-  margin-bottom: 20px;
-  padding-top: 20px;
+form{
+  display: grid;
+  grid-template-columns: 1fr 300px;
 }
 
- .container {
-  margin: 0 auto;
-  max-width: 1024px;
+button{
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #9199ff;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  box-shadow: #0c0c0c 0 0 30px;
+  cursor: pointer;
 }
 
- .search-box{
+.container{
+  width: 100%;
+  max-width: 1400px;
+}
+
+.container-index{
+  height: 100vh;
+  width: 100%;
+  padding: 25px;  
   display: flex;
   justify-content: center;
 }
 
- .search-input{
-  margin-right: 2rem;
+.container-tracks{
+  width:900px;
+  background-color: #1d1d1d;
+  box-shadow: #151515 0px 0px 20px;
+  color: white;
 }
 
- .btn{
-  color: var(--white);
-  background: var(--primary-color);
-  padding: 0.75rem 3rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 500px;
-  cursor: pointer;
-}
-
- .cards{
+.form-wrap{
+  width:100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
 }
 
- .card{
+.artistsList, .albumsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.artistsList a{
+  width: 30%;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.albumsList a{
+  width:49%;
+  margin: 10px auto;
+}
+
+.artistCard, .albumCard{
+  width:100%;
+  background-color: #9199ff;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: #0c0c0c 0 0 30px;
+}
+.albumCard{
+  margin:0;
+}
+
+.albumCard a{
+  width: 48%;
+}
+
+.artistCard img{
+  height: 430px;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  min-width: 100%;
+}
+.albumCard img{
+  width: 100%;
+}
+
+.artistCard p, .albumCard p{
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  
+}
+
+.button{
+  color: #5f25ca;
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.albumsList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tracksList{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:40px;
+}
+
+.tracksListUl{
+  padding: 10px 35px;
+}
+
+.tracksListUl li{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.no-results{
+  width: 600px;
+  background-color: #212121;
+  padding: 30px;
+  box-shadow: #020202 0px 0px 66px;
+  color: white;
   display: flex;
   flex-direction: column;
-  padding: 1rem 0.75rem;
+  align-items: center;
+}
+
+.artistsList a.return{
+  display: flex;
+  justify-content: center;
 }

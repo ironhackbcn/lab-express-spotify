@@ -5,7 +5,25 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const hbs = require('hbs');
 
-// require spotify-web-api-node package here:
+const SpotifyWebApi = require('spotify-web-api-node');
+
+// Remember to insert your credentials here
+const clientId = 'fed8cc90df634455a7c3607e0df63492',
+    clientSecret = '67891505eda04165a28035e25f1c78a9';
+
+const spotifyApi = new SpotifyWebApi({
+  clientId : clientId,
+  clientSecret : clientSecret
+});
+
+// Retrieve an access token
+spotifyApi.clientCredentialsGrant()
+  .then( data => {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  })
+  .catch(error => {
+    console.log('Something went wrong when retrieving an access token', error);
+  })
 
 const indexRouter = require('./routes/index');
 

@@ -88,3 +88,26 @@
   flex-direction: column;
   padding: 1rem 0.75rem;
 }
+
+.grey-bg{
+  background-color: gray;
+  text-align: center;
+  color: white;
+}
+
+.grey-bg p,button{
+  margin: 0;
+}
+
+.grey-bg button{
+  color: white;
+  padding: 0.2rem 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 700px;
+  cursor: pointer;
+  background: var(--primary-color);
+  margin-bottom: 5px;
+}

@@ -7,4 +7,4 @@ const router = express.Router();
   res.render('index');
 });
 
- module.exports = router;
+ module.exports = router; 

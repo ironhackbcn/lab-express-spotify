@@ -1,13 +1,8 @@
-<div class="cards-container track">
+<div class="cards-container">
   {{#each songs}}
     <div class="track-container">
       {{name}}
-      <audio
-            controls
-            src="{{preview_url}}">
-                Your browser does not support the
-                <code>audio</code> element.
-      </audio>
+      <audio controls src="{{preview_url}}"> Your browser does not support the audio element. </audio>
     </div>
   {{/each}}
 </div>

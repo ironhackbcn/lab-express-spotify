@@ -77,14 +77,32 @@
   cursor: pointer;
 }
 
- .cards{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
- .card{
+ .cards-container{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ .track-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   padding: 1rem 0.75rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 0.75rem;
+}
+
+.index-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }

@@ -23,15 +23,33 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   });
 
+// Route to get albums from spotify API
 router.get('/:artistId', async (req, res, next) => {
   try {
     const id = req.params.artistId; // name after req.params.NAME - has to be the same as in the path above!
     const albums = await spotifyApi.getArtistAlbums(id);
-    console.log(albums);
-    // res.render('albums.hbs', albums)
+    // console.log(albums.body.items);
+    res.render('albums.hbs', albums);
   } catch (error) {
     next(error);
   }
 });
+
+// router.get('/:artistId/tracks', async(req, res, next) => {
+//   try {
+//     const id = req.params.artistId;
+//     const = tracks await getAlbumTracks(id)
+//   } catch (error) {
+//     next(error);
+//   }
+// })
+
+// Get tracks in an album
+spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit: 5, offset: 1 })
+  .then(function (data) {
+    console.log(data.body);
+  }, function (err) {
+    console.log('Something went wrong!', err);
+  });
 
 module.exports = router;

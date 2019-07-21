@@ -28,10 +28,10 @@ router.get('/', async (req, res, next) => {
     const searchArtist = req.query.search; // what the user's looking for
     const artist = await spotifyApi.searchArtists(searchArtist);
     // console.log('The received data from the API: ', artist.body.artists.items);
-    res.render('artists.hbs', artist);
+    console.log(artist);
+    // res.render('artists.hbs', artist);
   } catch (error) {
     next(error);
-    // console.log('The error while searching artists occurred: ', err);
   };
 });
 

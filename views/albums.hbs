@@ -1,9 +1,12 @@
-<h1>Albums Page</h1>
+<h1>Albums Page, bitch!</h1>
 <section>
   <ul>
-    {{#each artist.body.artists}}
-      <li>
-        <h2>Aalbum NaMe</h2>
-      </li>
+    {{#each this.body.items}}
+    <li>
+      <img src="{{images.0.url}}" alt="">
+      <p>{{name}}</p>
+      <a href="/albums/{{id}}/tracks">View Tracks</a>
+    </li>
+    {{/each}}
   </ul>
 </section>

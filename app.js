@@ -46,7 +46,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter); // when user puts '/', execute indexRouter
-app.use('/artists', artistsRouter); // when user puts
+app.use('/artists', artistsRouter);
 app.use('/albums', albumsRouter);
 
 // -- 404 and error handler

@@ -1,0 +1,20 @@
+<section>
+  <h1>Artist page</h1>
+  <ul class="cards">
+    {{#each artist}}
+      <article>
+        <li class="card">
+          <p class="text-truncate">{{this.name}}</p>
+          {{!-- 'images.1' acces array images, index 1 --}}
+          {{#if images}}
+           <img src="{{this.images.1.url}}" alt="{{this.name}}"/>
+          {{else}}
+           <img src="./images/random-image.jpg" width="30%" alt="random artist cover">
+          {{/if}}
+          <a href="/albums/{{this.id}}">View Albums</a>
+        </li>
+            
+      </article>
+    {{/each}}
+  </ul>
+</section>

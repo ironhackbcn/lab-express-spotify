@@ -1,10 +1,14 @@
-<h1>Tracks</h1>
-
-<section>
+<section class="tracks">
+  <header>
+    <h2>Title</h2>
+    <h2>Listen</h2>
+  </header>
   {{#each tracks}}
     <article>
       <p>{{this.name}}</p>
-      {{!-- <p>{{this.id}}</p> --}}
+      <audio controls name="media">
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+      </audio>
     </article>
   {{/each}}
 </section>

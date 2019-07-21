@@ -10,8 +10,6 @@ const hbs = require('hbs');
 const indexRouter = require('./routes/index');
 const artistsRouter = require('./routes/artists');
 
-// const tracksRouter = require('./routes/tracks');
-
 const app = express();
 
 // view engine setup
@@ -27,8 +25,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/artists', artistsRouter);
-
-// app.use('/tracks', tracksRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

@@ -1,4 +1,12 @@
 {{#each albumTracks}}
-<p>{{name}}</p>
-<a href="/artists/{{artists.[0].id}}/albums/{{id}}">View tracks</a>
+<section id="tracksList">
+<p><span>{{track_number}}</span> {{name}}</p>
+  {{#if preview_url}}
+    <audio controls controlsList="nodownload">
+      <source src="{{preview_url}}"></source>
+    </audio>
+  {{else}}
+    <p>Preview not available</p>
+  {{/if}}
+</section>
 {{/each}}

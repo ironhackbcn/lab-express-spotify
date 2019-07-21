@@ -13,7 +13,7 @@
 }
 
  body {
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--black);
   font-size: 16px;
   line-height: 147%;
@@ -54,6 +54,8 @@
  .container {
   margin: 0 auto;
   max-width: 1024px;
+  display:flex;
+  justify-content:center;
 }
 
  .search-box{

@@ -1,5 +1,7 @@
+<section id="albumsList">
 {{#each artistAlbums}}
-<p>{{name}}</p>
-<img src="{{images.1.url}}" alt="{{name}} cover">
-<a href="/artists/{{artists.[0].id}}/albums/{{id}}">View tracks</a>
+  <p>{{name}}</p>
+  <img src="{{images.1.url}}" alt="{{name}} cover">
+  <a href="/artists/{{artists.[0].id}}/albums/{{id}}">View tracks</a>
 {{/each}}
+</section>

@@ -1,1 +1,8 @@
-<h1>Welcome to {{title}}</h1>
+<section class="homepage">
+  <h1>Welcome to {{ title }}</h1>
+  <form class="search-box" method="GET" action="/artists">
+    <label for="artist">{{ label }}</label>
+    <input class="search-input" type="text" name="artist" id="artist" placeholder="{{ label }}">
+    <button class="btn" type="submit">{{ button }}</button>
+  </form>
+</section>

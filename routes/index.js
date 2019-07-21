@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
   const home = {
-    title: '...here!',
+    title: 'Wellcome!',
     label: 'Look for an artist',
     button: 'Search'
   };

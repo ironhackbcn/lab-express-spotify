@@ -27,7 +27,6 @@ router.get('/', async (req, res, next) => {
   const { artist } = req.query;
   try {
     const artistArray = await spotifyApi.searchArtists(artist);
-    console.log(artistArray);
     res.render('artists', { artist: artistArray.body.artists.items });
   } catch (error) {
     next(error);

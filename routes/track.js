@@ -1,14 +1,6 @@
 const express = require('express');
 const router = express.Router();
-
-const SpotifyWebApi = require('spotify-web-api-node');
-
-const clientId = '428e6b0ff4bf4e2bb658f3dd3a844476';
-const clientSecret = '61c7d5de42bd4ef3a1517955cbdea26b';
-const spotifyApi = new SpotifyWebApi({
-  clientId: clientId,
-  clientSecret: clientSecret
-});
+const spotifyApi = require('../public/token');
 
 spotifyApi.clientCredentialsGrant()
   .then(data => {
@@ -18,16 +10,15 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   });
 
-router.get('/:id', (req, res, next) => {
+router.get('/:id', async (req, res, next) => {
   const album = req.params.id;
-  spotifyApi.getAlbumTracks(album)
-    .then(function (data) {
-      const songs = data.body.items;
-      console.log('Albums songs', { songs });
-      res.render('track', { songs });
-    }, function (err) {
-      next(err);
-    });
+  try {
+    const response = await spotifyApi.getAlbumTracks(album);
+    const songs = response.body.items;
+    res.render('track', { songs });
+  } catch (err) {
+    next(err);
+  }
 });
 
 module.exports = router;

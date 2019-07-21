@@ -1,0 +1,8 @@
+<section class="artists">
+  {{#each artists}}
+    <article class="card">
+      {{> card}}
+      <a href="/albums/{{id}}" class="card-btn">View Albums</a>
+    </article>
+  {{/each}}
+</section>

@@ -1,0 +1,16 @@
+<section class="tracks">
+  <header>
+    <h1>{{tracks.[0].artists.[0].name}}</h1>
+    <p>Listen</p>
+  </header>
+  {{#each tracks}}
+    <article class="track-item">
+        <p>{{name}}</p>
+        {{#if preview_url}}
+          <audio controls src="{{preview_url}}"></audio>
+        {{else}}
+          <p class="no-preview">No preview available</p>
+        {{/if}}
+    </article>
+  {{/each}}
+</section>

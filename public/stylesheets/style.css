@@ -16,13 +16,21 @@
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
   font-size: 16px;
-  line-height: 147%;
+  /* line-height: 147%; */
   margin: 0;
   padding: 0;
 }
 
  h1{
   color: var(--primary-color);
+  text-align: center;
+}
+
+h3{
+  margin:0;
+  color: white;
+  font-size: 1rem;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -46,14 +54,132 @@
   text-overflow: ellipsis;
 }
 
- section, article {
-  margin-bottom: 20px;
-  padding-top: 20px;
+#section-main{
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
 }
 
- .container {
-  margin: 0 auto;
-  max-width: 1024px;
+#form{
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px 100px;
+  text-align: center;
+  width: 50%;
+}
+
+#form input{
+  display: block;
+  padding:10px 20px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  font-size: 1rem;
+}
+
+#form input:focus{
+  border: 1px solid rgb(82, 157, 219);
+}
+
+#form button{
+  background-color: #ff6666;
+  color: white;
+  font-size: 1rem;
+  padding:10px 20px;
+  margin-top:10px;
+  border: none;
+}
+
+section.article{
+  width:80%;
+  margin:20px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 50px;
+  text-align: center;
+}
+
+section.article article, section.article div{
+  width: 300px;
+  height: auto;
+  padding-bottom: 20px;
+}
+
+section.article img{
+  width: 300px;
+}
+
+section.article div{
+  background-color: rgba(0,0,0,0.65);
+  margin:0;
+}
+
+section.article h3{
+  margin-top: -5px;
+  line-height:2;
+  margin-bottom: 10px;
+}
+
+section.article a{
+  background-color: #ff6666;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+section.tracks{
+  width: 90%;
+  height: auto;
+  margin:0 auto;
+}
+
+section.tracks header{
+  width:100%;
+  background-color: rgba(0,0,0,0.6);
+  display:flex;
+  justify-content: flex-start;
+}
+
+section.tracks header h2{
+  color: white;
+}
+
+section.tracks header h2:nth-child(1){
+  width:70%;
+}
+
+section.tracks header h2:nth-child(2){
+  width:30%;
+}
+
+section.tracks article{
+  width:100%;
+  background-color: rgba(0,0,0,0.05);
+  border-bottom: 2px solid white;
+  margin:0;
+  display:flex;
+  justify-content: space-between;
+}
+
+section.tracks article p{
+  width:60%;
+  margin:0;
+  padding: 10px;
+}
+
+section.tracks article audio{
+  margin: 10px 0;
+}
+
+ section, article {
+  margin-bottom: 20px;
+  /* padding-top: 20px; */
 }
 
  .search-box{

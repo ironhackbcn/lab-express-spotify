@@ -1,0 +1,15 @@
+<section class="article">
+  {{#each artists}}
+    <article>
+      {{#if this.images.0.url}}
+        <img src="{{this.images.0.url}}" alt="artist photo">
+      {{else}}
+        <img src="./images/man-4-400.jpg" alt="artist photo">
+      {{/if}}
+      <div>
+        <h3>{{this.name}}</h3>
+        <a href="/albums/{{this.id}}">View albums</a>
+      </div>
+    </article>
+  {{/each}}
+</section>

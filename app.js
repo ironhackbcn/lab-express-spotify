@@ -8,6 +8,7 @@ const hbs = require('hbs');
 const indexRouter = require('./routes/index');
 const artistsRouter = require('./routes/artists');
 const albumsRouter = require('./routes/albums');
+const tracksRouter = require('./routes/tracks');
 
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -44,6 +45,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/artists', artistsRouter);
 app.use('/albums', albumsRouter);
+app.use('/tracks', tracksRouter);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

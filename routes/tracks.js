@@ -23,11 +23,11 @@ spotifyApi.clientCredentialsGrant()
   });
 
 router.get('/:id', async (req, res, next) => {
-  const { id } = req.params;
+  const id = req.params.id;
   try {
-    const albumArray = await spotifyApi.getArtistAlbums(id);
-    // console.log(albumArray.body.items[0]);
-    res.render('albums', { album: albumArray.body.items });
+    const trackArray = await spotifyApi.getAlbumTracks(id);
+    // console.log(trackArray.body.items[0]);
+    res.render('tracks', { track: trackArray.body.items });
   } catch (error) {
     next(error);
   }

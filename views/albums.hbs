@@ -1,0 +1,23 @@
+
+<nav>
+
+    <a href="/">New search</a>
+  </nav>
+
+<header>
+<h1>{{artistName}} albums</h1>
+</header>
+
+<section id="albumsList">
+{{#each artistAlbums}}
+<article>
+  {{#if images}}
+    <img src="{{images.0.url}}" alt="{{name}} cover">
+  {{else}}
+    <img src="/img/no_image_available.png" alt="No image available" cover>
+  {{/if}}
+  <p>{{name}}</p>
+  <a class="btn" href="/artists/{{artists.[0].id}}/albums/{{id}}">View tracks</a>
+</article>
+{{/each}}
+</section>

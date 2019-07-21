@@ -1,0 +1,242 @@
+:root{
+  --primary-color: #1DB954;
+  --white: #ffffff;
+  --black: #222326;
+}
+
+ html {
+  box-sizing: border-box;
+}
+
+ *, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 147%;
+  margin: 0;
+  padding: 0;
+}
+
+ h1{
+  color: var(--primary-color);
+  text-align: center;
+  display:block;
+  line-height: 150%;
+}
+
+ a {
+  color: var(--primary-color);
+}
+
+ ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+ li{
+  list-style: none;
+}
+
+ .text-truncate {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ section, article {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+ .container {
+  margin: 0 auto;
+  /* max-width: 1024px; */
+  padding: 0 15px;
+}
+
+ .search-box{
+  display: flex;
+  justify-content: center;
+}
+
+ .search-input{
+  margin-right: 2rem;
+}
+
+ .btn{
+  color: var(--white);
+  background: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 500px;
+  cursor: pointer;
+  padding: 10px 25px;
+  font-size: 14px;
+  border: none;
+  text-decoration:none;
+}
+
+ .cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ .card{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.75rem;
+}
+
+#homepage {
+  display:flex;
+  background: url(/img/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  justify-content:center;
+  flex-direction:column;
+  align-content:center;
+  flex-wrap:wrap;
+  height: 100vh;
+}
+
+.modal {
+text-align:center;
+padding: 30px;
+background: rgba(255, 255, 255, 0.8)
+}
+
+.modal img {width: 250px;}
+
+#searchForm label{display:none;}
+
+#searchForm input{
+  display:block;
+  width: 70vw;
+  max-width: 300px;
+  height: auto;
+  font-size: 30px;
+  padding: 10px;
+  background-color: transparent;
+  border-style: none none solid none;
+  text-align:center;
+  margin: 50px 0 35px 0;
+}
+
+#searchForm input::placeholder {
+  text-align:center;
+}
+
+#searchForm button{
+  color: white;
+  font-weight: 700;
+  padding: 15px 25px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background: #1DB954;
+  border: none;
+  text-decoration:none;
+}
+
+header {
+padding:0 0 20px 0;
+}
+
+#artistsList, #albumsList {
+  display:flex;
+  justify-content:center;
+  align-content:center;
+  flex-wrap:wrap;
+}
+
+#artistsList article, #albumsList article {
+  flex: 0 0 30%;
+  text-align: center;
+  padding: 0 1%;
+  margin-bottom: 50px;
+}
+
+#artistsList p, #albumsList p {
+  font-weight: 600;
+}
+
+#artistsList article img, #albumsList article img {
+  width:300px;
+  height:300px;
+  object-fit: cover;
+}
+
+#trackList {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  display:flex;
+  justify-content:center;
+  align-content:center;
+}
+
+nav {
+ width: 100%;
+ margin-top:20px;
+}
+nav a {
+  display: inline-block;
+  width: 50%;
+  margin: -10px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+#trackList header img {
+  display:block;
+  width:500px;
+  height:500px;
+  object-fit: cover;
+  display: block;
+  margin: 30px auto;
+  }
+
+#trackList article p {
+display:inline-block;
+vertical-align: middle;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+max-width: 200px;
+font-weight: 500;
+}
+
+.tracks {
+  max-width: 750px;
+  margin: 0 auto;}
+
+#trackList article audio {
+  vertical-align: middle;
+  float: right;
+  overflow: hidden;
+  margin: 0 0 0 20px;
+}
+
+#trackList .num-cont{
+  background: #1DB954;
+  color: white;
+  font-weight: 700;
+  vertical-align: middle;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  padding-top: 3px;
+  margin-right: 5px;
+}
+

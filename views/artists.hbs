@@ -1,0 +1,24 @@
+
+<header>
+<h1>Search results for: {{searchInput}}</h1>
+</header>
+
+<section id="artistsList">
+{{#if match}}
+{{#each artists}}
+<article>
+  {{#if images}}
+    <img src="{{images.1.url}}" alt="{{name}} image">
+  {{else}}
+    <img src="/img/no_image_available.png" alt="No image available" cover>
+  {{/if}}
+  <p>{{name}}</p>
+  <a class="btn" href="/artists/{{id}}/albums">View albums</a>
+</article>
+{{/each}}
+
+{{else}}
+<p>No artists found 😕</p>
+<a href="/">Try again with anoter keyword</a>
+{{/if}}
+</section>

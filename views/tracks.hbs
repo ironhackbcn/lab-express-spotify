@@ -1,0 +1,45 @@
+<nav>
+  <a href="/artists/{{artistId}}/albums">Back to {{albumArtist}} albums</a>
+  <a href="/">New search</a>
+</nav>
+
+<section id="trackList">
+  <header>
+    <h1>{{albumTitle}}</h1>
+    <img src="{{albumCover}}" alt="{{albumTitle}} cover">
+  </header>
+
+<section class="tracks">
+  {{#each albumTracks}}
+  <article>
+  <span class="num-cont"><span class="num">{{track_number}}</span></span>
+  <p>{{name}}</p>
+  {{#if preview_url}}
+    <audio class="audio" controls controlsList="nodownload" src="{{preview_url}}"></audio>
+  {{else}}
+  <p><i>– No preview available</i></p>
+  {{/if}}
+  </article>
+{{/each}}
+</section>
+
+</section>
+
+<script>
+const container = document.getElementById('trackList');
+function onlyPlayOneIn(container) {
+  container.addEventListener('play', function(event) {
+  audioElements = container.getElementsByTagName('audio')
+    for(i=0; i < audioElements.length; i++) {
+      audioElement = audioElements[i];
+      if (audioElement !== event.target) {
+        audioElement.pause();
+      }
+    }
+  }, true);
+};
+
+document.addEventListener('DOMContentLoaded', function() {
+  onlyPlayOneIn(container);
+});
+</script>

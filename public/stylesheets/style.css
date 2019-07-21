@@ -52,8 +52,32 @@
 }
 
  .container {
-  margin: 0 auto;
-  max-width: 1024px;
+  background-image: url(../images/concert.png);
+  height: 100vh;
+  background-position: center;
+  margin: 0;
+}
+
+.form {
+  width: 33%;
+  height: 12%;
+  margin: 15% 33%;
+  background-color: rgba(131, 131, 131, 0.514);
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px
+}
+
+form button {
+  margin: 0 20% 10px 20%;
+}
+
+.grid {
+  background-color: #222326;
+}
+
+input {
+  margin: 10px
 }
 
  .search-box{
@@ -81,10 +105,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  background-color: #222326;
 }
 
  .card{
   display: flex;
   flex-direction: column;
   padding: 1rem 0.75rem;
+  background-color: rgba(131, 131, 131, 0.514);
+  margin: 25px
+
 }
+

@@ -11,7 +11,6 @@
  *, *:before, *:after {
   box-sizing: inherit;
 }
-
  body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
@@ -46,6 +45,14 @@
   text-overflow: ellipsis;
 }
 
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
  section, article {
   margin-bottom: 20px;
   padding-top: 20px;
@@ -59,10 +66,14 @@
  .search-box{
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
  .search-input{
-  margin-right: 2rem;
+  padding: 8%;
+  margin-bottom: 7%;
+  border-radius: 12%;
 }
 
  .btn{

@@ -1,10 +1,9 @@
-<h1>hello</h1>
-{{#each body.items}}
-<article>
-<img src={{images.0.url}}>
-<p>{{name}}</p>
-<button><a href="/tracks/{{id}}">View tracks</a>
-</button>
-
-</article>
+<section class="cards">
+  {{#each body.items}}
+   <article class="card">
+   <img src={{images.0.url}}>
+   <p>{{name}}</p>
+   <button class="button-2"><a href="/tracks/{{id}}">View tracks</a></button>
+  </article>
 {{/each}}
+</section>

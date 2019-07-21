@@ -1,10 +1,8 @@
-<h1>fkjhvje</h1>
-<h1>Artists page</h1>
+<section class="music">
 {{#each body.items}}
+<article class="audio">
 <ul>
-  <li>
-<p>{{name}}</p>
-  </li>
+  <li><p class "name">{{name}}</p></li>
   <li>
     <audio controls>
   <source src={{preview_url}} type="audio/mpeg"> 
@@ -13,9 +11,7 @@
 </audio>
   </li>
 </ul>
-
-
-
-
 </article>
 {{/each}}
+
+</section>

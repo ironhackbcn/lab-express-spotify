@@ -1,7 +1,6 @@
 'use strict';
 
 const express = require('express');
-const spotifyApi = require('../spotifyAPI');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {

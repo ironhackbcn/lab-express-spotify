@@ -1,9 +1,10 @@
 <section id="homepage">
-<h1>Welcome to {{title}}</h1>
-
-<form action="/artists" method="GET" id="searchForm">
-{{!-- <label for="search"></label> --}}
-<input type="text" name="artist" id="searchInput" placeholder="The Beatles">
-<button type="submit">Search for an artist</button>
-</form>
+  <div class="modal">
+    <img src="/img/Spotify-logo.png" alt="">
+    <form action="/artists" method="GET" id="searchForm">
+    <label for="search">Type the artist name</label>
+    <input type="text" name="artist" id="searchInput" placeholder="Shakira" value="Shakira">
+    <button type="submit">Search for an artist</button>
+    </form>
+  </div>
 </section>

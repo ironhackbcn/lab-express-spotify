@@ -1,18 +1,21 @@
-<section id="artistsList">
-{{#if total}}
 
+<header>
+<h1>Search results for: {{searchInput}}</h1>
+</header>
+
+<section id="artistsList">
+{{#if match}}
 {{#each artists}}
 <article>
-  <p>{{name}}</p>
-  {{#if images.1.url}}
-    <img src="{{images.1.url}}" alt="{{name}} cover">
+  {{#if images}}
+    <img src="{{images.1.url}}" alt="{{name}} image">
   {{else}}
     <img src="/img/no_image_available.png" alt="No image available" cover>
   {{/if}}
-  <a href="/artists/{{id}}/albums">View albums</a>
+  <p>{{name}}</p>
+  <a class="btn" href="/artists/{{id}}/albums">View albums</a>
 </article>
 {{/each}}
-
 
 {{else}}
 <p>No artists found 😕</p>

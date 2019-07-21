@@ -1,0 +1,8 @@
+<div class="cards-container">
+  {{#each artistsArray}}
+    <div class="card">
+      {{>card}}
+      <a class="card-button" href="/artists/{{id}}">View Albums</a>
+    </div>
+  {{/each}}
+</div>

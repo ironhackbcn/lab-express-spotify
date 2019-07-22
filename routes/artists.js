@@ -4,7 +4,7 @@ const express = require('express');
 const router = express.Router();
 
 // Retrieve an access token
-const spotifyApi = require('./spotifyAuth');
+const spotifyApi = require('../helpers/spotifyAuth');
 
 // search artist
 router.get('/', async (req, res, next) => {

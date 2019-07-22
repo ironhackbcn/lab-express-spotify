@@ -1,0 +1,9 @@
+<section class="cards">
+ {{#each body.artists.items}}
+  <article class="card">
+   <img src={{images.1.url}}>
+   <p>{{name}}</p>
+   <button class="button-2"><a href="/albums/{{id}}">View albums</a></button>
+ </article>
+{{/each}}
+</section>

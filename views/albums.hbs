@@ -1,0 +1,17 @@
+<section>
+  <h1>Albums</h1>
+  <ul class="cards">
+    {{#each albums}}
+      <article>
+        <li class="card">
+          {{!-- 'images.1' acces array images, index 1 --}}
+          <img src="{{this.images.1.url}}" alt="{{this.name}}">
+          <div class="grey-bg">
+            <p class="text-truncate">{{this.name}}</p>
+            <a class = "button" href="/tracks/{{this.id}}">View Tracks</a>
+          </div>
+        </li>
+      </article>
+    {{/each}}
+  </ul>
+</section> 

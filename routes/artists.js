@@ -24,7 +24,7 @@ spotifyApi.clientCredentialsGrant()
   });
 
 router.get('/', async (req, res, next) => {
-  const { artist } = req.query;
+  const { artist } = req.query; // equal to conts artist = req.query.artist
   try {
     const artistArray = await spotifyApi.searchArtists(artist);
     res.render('artists', { artist: artistArray.body.artists.items });

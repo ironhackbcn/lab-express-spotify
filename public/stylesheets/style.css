@@ -1,90 +1,260 @@
-:root{
-  --primary-color: #1DB954;
+/* COLORS */
+
+:root {
+  --primary-color: #1db954;
+  --secondary-color: #d5f2df;
   --white: #ffffff;
   --black: #222326;
 }
 
- html {
-  box-sizing: border-box;
-}
+/* GLOBAL STYLES */
 
- *, *:before, *:after {
-  box-sizing: inherit;
-}
-
- body {
+body {
+  height: 100vh;
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
-  font-size: 16px;
-  line-height: 147%;
-  margin: 0;
-  padding: 0;
+  line-height: 1;
 }
 
- h1{
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-image: url("/images/markus-spiske-i2hfu0fcfus-unsplash.jpg");
+  background-size: cover;
+  background-position: 50% 100%;
+  padding: 6rem 0;
+}
+
+a {
   color: var(--primary-color);
-  text-align: center;
 }
 
- a {
-  color: var(--primary-color);
-}
-
- ul, li{
-  margin: 0;
-  padding: 0;
-}
-
- li{
-  list-style: none;
-}
-
- .text-truncate {
-  max-width: 300px;
+.text-truncate {
+  max-width: 18.75rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
- section, article {
-  margin-bottom: 20px;
-  padding-top: 20px;
-}
-
- .container {
-  margin: 0 auto;
-  max-width: 1024px;
-}
-
- .search-box{
-  display: flex;
-  justify-content: center;
-}
-
- .search-input{
-  margin-right: 2rem;
-}
-
- .btn{
+.btn {
   color: var(--white);
   background: var(--primary-color);
-  padding: 0.75rem 3rem;
+  padding: 0.75rem 1rem;
+  max-width: 16rem;
+  height: 2.5rem;
+  font-size: .875rem;
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
   border: 1px solid transparent;
-  border-radius: 500px;
+  border-radius: 31.25rem;
   cursor: pointer;
 }
 
- .cards{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.btn:hover {
+  color: var(--primary-color);
+  background: var(--white);
 }
 
- .card{
+
+/* HEADER, FOOTER */
+
+.site-header,
+.site-footer {
   display: flex;
-  flex-direction: column;
-  padding: 1rem 0.75rem;
+  justify-content: center;
+  align-items: baseline;
+  background-color: var(--secondary-color);
+  line-height: 1;
+}
+
+.header-brand {
+  color: var(--black);
+  font-size: .75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  padding: .875rem;
+}
+
+.credits-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  font-size: .75rem;
+  line-height: .75;
+  padding: .875rem;
+}
+
+.credits-list-link {
+  cursor: pointer;
+}
+
+.credits-list-link:hover {
+  text-decoration: underline;
+}
+
+/* HOME - SEARCH ARTIST */
+.homepage {
+  display: inline-flex;
+  flex-flow: column nowrap;
+}
+
+.homepage-title {
+  color: var(--primary-color);
+  text-align: center;
+  align-self: center;
+  margin-bottom: 3rem;
+}
+
+.hidden-label {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 30rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 3rem 0;
+}
+
+.search-input {
+  margin-right: 2rem;
+  width: 12.5rem;
+  padding: 0 .875rem;
+}
+
+
+/* ALBUMS & ARTISTS VIEW -- CARDS */
+
+.search-results {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.search-results-title {
+  color: var(--white);
+  align-self: center;
+  margin-bottom: 3rem;
+}
+
+.search-again {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-self: center;
+  width: 30rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 3rem 0;
+}
+
+.search-notfound {
+  color: var(--black);
+  align-self: center;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.card {
+  width: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 1rem;
+}
+
+.card-image {
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-flow: column wrap;
+  }
+}
+
+.card-info {
+  color: var(--white);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.card-artist,
+.card-album {
+  max-width: 11.25rem;
+}
+
+
+/* TRACKS VIEW */
+.tracks-results {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.tracks-heading {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding: .875rem 1rem;
+}
+
+.tracks-header-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tracks-list {
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 2rem 0;
+}
+
+.tracks-list-item {
+  width: 100%;
+  padding: 1rem;
+}
+
+.track-list-name {
+  margin-bottom: .875rem;
+}
+
+audio,
+.track-list-controls {
+  width: 100%;
+}
+
+.tracks-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: .875rem 1rem;
+}
+
+.tracks-footer-anchor {
+  font-size: .875rem;
+  color: var(--white);
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
 }

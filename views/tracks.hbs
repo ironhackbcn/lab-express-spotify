@@ -1,0 +1,16 @@
+<section class="tracks-results">
+  <header class="tracks-heading">
+    <ul class="tracks-header-list">
+      <li class="tracks-header-item">Title</li>
+      <li class="tracks-header-item">Listen</li>
+    </ul>
+  </header>
+  <ul class="tracks-list">
+    {{#each tracks}}
+    {{>trackItem}}
+    {{/each}}
+  </ul>
+  <div class="tracks-footer">
+    <a class="tracks-footer-anchor" href="/">Search for another artist</a>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<section class="search-results">
+  <h2 class="search-results-title">Search results:</h2>
+  {{#if artist}}
+  <div class="cards">
+    {{#each artist}}
+    {{>artistCard}}
+    {{/each}}
+  </div>
+  {{else}}
+  <div class="search-again">
+    <h3 class="search-notfound">Meh! We couldn't find that artist!</h3>
+    <a class="btn" href="/">Try another!</a>
+  </div>
+  {{/if}}
+</section>

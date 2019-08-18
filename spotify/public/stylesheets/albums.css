@@ -1,0 +1,40 @@
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.albums {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #636e72;
+  text-align: center;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.albums img {
+  width: 300px;
+}
+
+.albums p {
+  color: white;
+  width: 270px;
+  font-weight: bold;
+}
+
+.albums a {
+  background-color: crimson;
+  color: white;
+  width: 120px;
+  margin: 0 auto 10px;
+  padding: 6px 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-decoration: none;
+}

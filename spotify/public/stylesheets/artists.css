@@ -1,0 +1,35 @@
+.artists-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.artists {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+  background-color: #636e72;
+  margin: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-weight: bold;
+}
+
+a {
+  background-color: crimson;
+  color: white;
+  width: 120px;
+  margin: 0 auto 10px;
+  padding: 6px 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  text-decoration: none;
+}

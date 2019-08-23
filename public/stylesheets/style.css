@@ -1,18 +1,20 @@
-:root{
-  --primary-color: #1DB954;
+:root {
+  --primary-color: #1db954;
   --white: #ffffff;
   --black: #222326;
 }
 
- html {
+html {
   box-sizing: border-box;
 }
 
- *, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
- body {
+body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
   font-size: 16px;
@@ -21,51 +23,53 @@
   padding: 0;
 }
 
- h1{
+h1 {
   color: var(--primary-color);
   text-align: center;
 }
 
- a {
+a {
   color: var(--primary-color);
 }
 
- ul, li{
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
- li{
+li {
   list-style: none;
 }
 
- .text-truncate {
+.text-truncate {
   max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
- section, article {
+section,
+article {
   margin-bottom: 20px;
   padding-top: 20px;
 }
 
- .container {
+.container {
   margin: 0 auto;
   max-width: 1024px;
 }
 
- .search-box{
+.search-box {
   display: flex;
   justify-content: center;
 }
 
- .search-input{
+.search-input {
   margin-right: 2rem;
 }
 
- .btn{
+.btn {
   color: var(--white);
   background: var(--primary-color);
   padding: 0.75rem 3rem;
@@ -77,14 +81,96 @@
   cursor: pointer;
 }
 
- .cards{
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
- .card{
+.card {
   display: flex;
   flex-direction: column;
   padding: 1rem 0.75rem;
+}
+
+/*************** HOME PAGE ******************/
+
+.index-main {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/concert.jpg");
+  background-size: cover;
+  display: block;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  padding-top: 300px;
+}
+
+.form-input {
+  width: 350px;
+  font-size: 1em;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: red;
+  color: white;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: block;
+}
+
+/*************** ARTISTS & ALBUMS PAGE ******************/
+
+.artist-list,
+.album-list {
+  width: 95%;
+}
+
+.artist-card,
+.album-card {
+  display: inline-block;
+  width: 27%;
+  height: auto;
+  margin: 20px 10px 0 20px;
+}
+
+.artist-card img,
+.album-card img {
+  width: 250px;
+}
+
+.artist-card p,
+.album-card p {
+  text-align: center;
+}
+
+.artist-card a,
+.album-card a {
+  display: block;
+  margin-left: 30%;
+}
+
+/*************** TRACKS PAGE ******************/
+
+table {
+  width: 80%;
+  margin-left: 10%;
+}
+
+table th {
+  background-color: grey;
+  color: white;
+  padding: 10px;
+}
+
+audio {
+  padding: 5px 0 5px 0;
 }

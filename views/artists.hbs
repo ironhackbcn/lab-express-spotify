@@ -1,17 +1,11 @@
 <section class="artistList">
     {{#if this.body.artists.items}}
     {{#each this.body.artists.items}}
-    <a href="/albums/{{id}}">
-        <article class="artistCard">
-            {{#if images}}
-            <img src={{images.0.url}}>
-            {{else}}
-            <img src="./images/912.jpg">
-            {{/if}}
-            <p>{{name}}</p>
-            <div class="button">View albums</div>
-        </article>
-    </a>
+    <article class="artistCard">
+        <img src={{images.0.url}}>
+        <p>{{name}}</p>
+        <div class="button"><a href="/albums/{{id}}">View albums</a></div>
+    </article>
     {{/each}}
     {{else}}
     <div class="no-results">

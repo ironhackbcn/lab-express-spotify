@@ -1,0 +1,6 @@
+<h1>Albums of Seached Artists</h1>
+{{#each items}}
+  <h2>{{this.name}}</h2>
+  <image src="{{this.images.0.url}}"></image>
+  <a href="/tracks/{{id}}">View Tracks</a>
+{{/each}}

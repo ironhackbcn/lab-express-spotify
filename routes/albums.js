@@ -11,7 +11,7 @@ router.get('/:id', (req, res, next) => {
   console.log(`EL ALBUM ES ${req.params.id}`);
   const { id } = req.params;
   spotifyApi.getArtistAlbums(id)
-    .then((data)=>{
+    .then((data) => {
       console.log(data.body.items);
       const { items } = data.body;
       res.render('albums', { items });

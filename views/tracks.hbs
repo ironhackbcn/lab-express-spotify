@@ -1,14 +1,23 @@
-<h1>LIST OF TRACKS</h1>
-<H3>TITLE</H3>
-<H3>LISTEN</H3>
-<div class="container">
-    <image src="{{this.image.0.url}}"></image>"
+<div class="container-tracks">
+    <h1>LIST OF TRACKS</h1>
+    <div class="titled">
+    <H2 class="beguin">TITLE</H2>
+    <H2 class="end">LISTEN</H2>
+    </div>
+
+
+
     {{#each items}}
-    {{this.name}}
-
-    <audio controls src="{{this.preview_url}}">Your browser does not support the
-        <code>audio</code>element.
-    </audio>
-
+    <div class="tracks-box">
+        <div class="text-box">
+            {{this.name}}
+        </div>
+        <div class="audio-box">
+            <audio controls src="{{this.preview_url}}">Your browser does not support the
+                <code>audio</code>element.
+            </audio>
+        </div>
+    </div>
     {{/each}}
+
 </div>

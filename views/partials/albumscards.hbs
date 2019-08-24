@@ -1,0 +1,11 @@
+<div class="card">
+  {{#if images.0.url }}
+      <img src="{{images.0.url}}">
+    {{else}}
+      <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg">
+    {{/if}}
+    <div class="artist-info">
+        <p>{{name}}</p>
+        <a href="/tracks/{{this.id}}">View Albums</a>
+    </div>
+</div>

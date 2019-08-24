@@ -1,6 +1,6 @@
 <h1>This the web site artists</h1>
-{{#each items}}
-    <image src="{{this.images.0.url}}"</image>
-    <h2>{{this.name}}</h2>
-    <a href="/albums/{{this.id}}">View Albums</a>
-{{/each}}
+<div class="cards">
+    {{#each items}}
+      {{> artistscard}}
+    {{/each}}
+</div>

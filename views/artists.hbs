@@ -1,0 +1,14 @@
+<h1>Artists</h1>
+<div class="artists-cards">
+    {{#if items}}
+    {{#each items}}
+    <div class="artist-card">
+        <span>{{this.name}}</span>
+        <img src={{this.images.0.url}}></span>
+        <a href="/albums/{{id}}">View albums</a>
+    </div>
+    {{/each}}
+    {{else}}
+    <a href="/">Oups...! Search again</a>
+    {{/if}}
+</div>

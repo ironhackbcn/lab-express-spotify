@@ -1,0 +1,15 @@
+<h1>Tracks</h1>
+<div class="artists-tracks">
+    {{#if items}}
+    {{#each items}}
+    <div class="artist-track">
+        <p>{{this.name}}</p>
+        <audio controls>
+            <source src={{this.preview_url}} type="audio/mpeg">
+        </audio>
+    </div>
+    {{/each}}
+    {{else}}
+    <a href="/">Oups...! Search again</a>
+    {{/if}}
+</div>

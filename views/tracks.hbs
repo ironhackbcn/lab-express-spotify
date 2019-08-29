@@ -1,0 +1,15 @@
+<div class="tracks-container">
+  <h1>Tracks list</h1>
+  <ul class="tracks-list">
+    {{#each body.items}}
+    <li>
+      <p>{{name}}</p>
+      <audio controls>
+        <source src={{preview_url}} type="audio/mpeg">
+        <p>Your browser doesn't support HTML5 audio. Here is
+          a <a href={{preview_url}}>link to the audio</a> instead.</p>
+      </audio>
+    </li>
+    {{/each}}
+  </ul>
+</div>

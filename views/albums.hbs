@@ -1,0 +1,10 @@
+<a href="/" class="button return">Search for another artist</a>
+<div class="">
+  {{#each this.body.items}}
+  <article class="">
+    <img src={{images.0.url}}>
+    <p>{{name}}</p>
+    <div class=""><a href="/tracks/{{id}}">View tracks</a></div>
+  </article>
+  {{/each}}
+</div>

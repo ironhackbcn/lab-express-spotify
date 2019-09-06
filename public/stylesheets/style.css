@@ -145,14 +145,16 @@ article {
   justify-content: space-between;
 }
 
-.artist-item {
+.artist-item,
+.album-item {
   width: 30%;
   margin: 1em;
   background-color: #4d4d4d;
   text-align: center;
 }
 
-.artist-item img {
+.artist-item img,
+.album-item img {
   width: 100%;
 }
 

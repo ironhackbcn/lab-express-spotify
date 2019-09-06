@@ -17,7 +17,7 @@ router.get("/", (req, res, next) => {
     .searchArtists(artistsReq)
     .then(data => {
       console.log("The received data from the API: ", data.body.artists.items);
-      res.render("artists", data.body.albums.id);
+      res.render("artists", data.body);
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);

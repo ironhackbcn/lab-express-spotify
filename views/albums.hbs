@@ -1,0 +1,14 @@
+<main class="container">
+  <div class="albums-wrapper">
+    <h1>Albums:</h1>
+    <div class="flex-container">
+      {{#each this}}
+      <div class="album-item">
+        <img src="{{this.images.0.url}}" alt="{{this.name}}">
+        <h2>{{this.artist.name}}</h2>
+        <a href="/tracks/{{this.id}}" class="small-red-btn"><button>View Tracks</button></a>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</main>

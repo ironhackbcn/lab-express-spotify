@@ -1,18 +1,20 @@
-:root{
-  --primary-color: #1DB954;
+:root {
+  --primary-color: #1db954;
   --white: #ffffff;
   --black: #222326;
 }
 
- html {
+html {
   box-sizing: border-box;
 }
 
- *, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
- body {
+body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
   font-size: 16px;
@@ -21,51 +23,54 @@
   padding: 0;
 }
 
- h1{
+h1 {
   color: var(--primary-color);
   text-align: center;
 }
 
- a {
+a {
   color: var(--primary-color);
 }
 
- ul, li{
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
- li{
+li {
   list-style: none;
 }
 
- .text-truncate {
+.text-truncate {
   max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
- section, article {
+section,
+article {
   margin-bottom: 20px;
   padding-top: 20px;
 }
 
- .container {
+.container {
   margin: 0 auto;
   max-width: 1024px;
+  padding-top: 4em;
 }
 
- .search-box{
+.search-box {
   display: flex;
   justify-content: center;
 }
 
- .search-input{
+.search-input {
   margin-right: 2rem;
 }
 
- .btn{
+.btn {
   color: var(--white);
   background: var(--primary-color);
   padding: 0.75rem 3rem;
@@ -77,14 +82,128 @@
   cursor: pointer;
 }
 
- .cards{
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
- .card{
+.card {
   display: flex;
   flex-direction: column;
   padding: 1rem 0.75rem;
+}
+
+/* Home */
+.home-wrapper {
+  background: url(../images/spotify_concert.jpeg) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 800px;
+  height: 100%;
+}
+.form-box {
+  background: rgba(255, 255, 255, 0.5);
+  width: 60%;
+  margin: 20% auto;
+  padding: 3em 4em;
+  text-align: center;
+}
+
+.form-input {
+  width: 80%;
+  height: 40px;
+  border: 1px solid #bbbaba;
+  border-radius: 3px;
+  color: #bbbaba;
+  font-size: 1em;
+  padding: 0.5em;
+}
+
+.red-btn {
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  box-shadow: none;
+  border: 0px;
+  height: 40px;
+  font-size: 1em;
+  color: #fff;
+  margin-top: 2em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
+.red-btn:hover {
+  background-color: #fff;
+  color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+/*Artists showcase*/
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.artist-item,
+.album-item {
+  width: 30%;
+  margin: 1em;
+  background-color: #4d4d4d;
+  text-align: center;
+}
+
+.artist-item img,
+.album-item img {
+  width: 100%;
+}
+
+.artist-item h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  font-weight: normal;
+  margin-top: 0.5em;
+}
+
+a.small-red-btn button {
+  background-color: #ef6866;
+  border-radius: 3px;
+  border: 0px;
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 0.9em;
+  color: #fff;
+  padding: 0.5em 1em;
+  margin-bottom: 2em;
+}
+
+a.small-red-btn button:hover {
+  background-color: #fff;
+  color: #ef6866;
+}
+
+/* Tracks showcase */
+
+.tracks-header {
+  background-color: #4a4a4a;
+  padding: 1em 2em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.tracks-header h3 {
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.track-item {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #fff;
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }

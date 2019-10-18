@@ -4,26 +4,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const hbs = require('hbs');
+const hbsutils = require('hbs-utils')(hbs);
 
-// BEGIN SPOTIFY INTEGRATION
-const SpotifyWebApi = require('spotify-web-api-node');
-const clientId = '272ee2be75504c7ea7e76fb1e582a6c8',
-  clientSecret = '6d2878a851f3439b8042d0169c4dfa4e';
-
-const spotifyApi = new SpotifyWebApi({
-  clientId: clientId,
-  clientSecret: clientSecret
-});
-
-// Retrieve an access token
-spotifyApi.clientCredentialsGrant()
-  .then(data => {
-    spotifyApi.setAccessToken(data.body['access_token']);
-  })
-  .catch(error => {
-    console.log('Something went wrong when retrieving an access token', error);
-  })
-// END SPOTIFY INTEGRATION
 
 const indexRouter = require('./routes/index');
 
@@ -32,6 +14,8 @@ const app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+hbsutils.registerPartials(__dirname + '/views/partials');
+hbsutils.registerWatchedPartials(__dirname + '/views/partials');
 
 app.use(logger('dev'));
 app.use(express.json());

@@ -4,7 +4,7 @@ const router = express.Router();
 
 // Index view
 router.get('/', (req, res, next) =>{
-  res.render('index', {title: 'Spotify Lab'});
+  res.render('index', {title: 'Spotify'});
 });
 
 // Artists view

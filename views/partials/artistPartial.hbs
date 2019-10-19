@@ -1,5 +1,5 @@
-<div class="artist">
-  <img src="{{images}}" alt="">
+<div class="artist-card">
+  <img src="{{images.0.url}}" alt="Picture of {{name}}">
   <h2>{{name}}</h2>
-  <button>View albums</button>
+  <button onclick="window.location.href='/albums/{{id}}'">View Albums</button>
 </div>

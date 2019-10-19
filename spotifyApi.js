@@ -1,3 +1,4 @@
+// Load SpotifyApi
 const SpotifyWebApi = require('spotify-web-api-node');
 const clientId = '272ee2be75504c7ea7e76fb1e582a6c8';
 const clientSecret = '6d2878a851f3439b8042d0169c4dfa4e';
@@ -16,4 +17,4 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   })
 
-  module.exports = spotifyApi;
+module.exports = spotifyApi;

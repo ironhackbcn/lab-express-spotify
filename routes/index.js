@@ -45,7 +45,6 @@ router.get('/tracks/:albumId', (req, res) => {
   spotifyApi.getAlbumTracks(albumId)
     .then(data => {
       let {items} = data.body;
-      console.log(items)
       res.render('tracks', {
         items,
         title: 'Tracks'

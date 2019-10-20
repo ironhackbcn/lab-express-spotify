@@ -1,9 +1,23 @@
-<div class="artist-card">
-  {{#if images}}
-    <img src="{{images.0.url}}" alt="Picture of {{name}}">
-  {{else}}
-    <img src="/images/default-artist.png" alt="Placeholder artist picture">
-  {{/if}}
-  <h2>{{name}}</h2>
-  <button onclick="window.location.href='/albums/{{id}}'">View Albums</button>
+<div class="card">
+  <div class="card-a-panel">
+    <div class="card-title">
+      <h2>{{name}}</h2>
+    </div>
+    <div class="likes">
+      <p><span class="followers">{{followers.total}}</span> people like this artist</p>
+    </div>
+    <ul class="genres">
+      {{#each genres}}
+      <li>{{this}}</li>
+      {{/each}}
+    </ul>
+    <div class="albums-btn" onclick="window.location.href='/albums/{{id}}'">View Albums<i class="fas fa-arrow-alt-circle-right"></i></div>
+  </div>
+  <div class="card-b-panel">
+    {{#if images}}
+    <img src="{{images.1.url}}" alt="Picture of {{name}}" class="card-image">
+    {{else}}
+    <img src="/images/default-artist.jpg" alt="Placeholder artist picture" class="card-image">
+    {{/if}}
+  </div>
 </div>

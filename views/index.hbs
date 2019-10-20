@@ -1,4 +1,18 @@
-<form action="/artists">
-  <input type="text" id="artist" name="artist">
-  <button type="submit">Search for an Artist</button>
-</form>
+<section class="index-box">
+  <div class="a-panel">
+    <div class="title">
+      <h1>music.</h1>
+    </div>
+      <div class="search-bar">
+        <div>
+          <form action="/artists" class="index-form" id="search-form">
+            <input type="text" id="artist" name="artist" class="search-input" placeholder="Search for an artist!">
+          </form>
+        </div>
+        <button class="search-btn" type="submit" form="search-form"><i class="fas fa-arrow-alt-circle-right"></i></button>
+      </div>
+  </div>
+  <div class="b-panel">
+    <img src="../images/music.png" alt="Music icons" class="hero-image">
+  </div>
+</section>

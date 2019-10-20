@@ -13,12 +13,19 @@
 }
 
  body {
+   background-image: url(/images/345122.jpg);
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
   font-size: 16px;
   line-height: 147%;
   margin: 0;
   padding: 0;
+}
+
+.indexbg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
  h1{

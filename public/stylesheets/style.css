@@ -1,18 +1,21 @@
-:root{
+:root {
   --primary-color: #1DB954;
   --white: #ffffff;
   --black: #222326;
 }
 
- html {
+html {
   box-sizing: border-box;
 }
 
- *, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
- body {
+body {
+  background-image: url(/images/backgroundIndex.jpg);
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   color: var(--black);
   font-size: 16px;
@@ -21,51 +24,53 @@
   padding: 0;
 }
 
- h1{
+h1 {
   color: var(--primary-color);
   text-align: center;
 }
 
- a {
+a {
   color: var(--primary-color);
 }
 
- ul, li{
+ul,
+li {
   margin: 0;
   padding: 0;
 }
 
- li{
+li {
   list-style: none;
 }
 
- .text-truncate {
+.text-truncate {
   max-width: 300px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
- section, article {
+section,
+article {
   margin-bottom: 20px;
   padding-top: 20px;
 }
 
- .container {
+.container {
   margin: 0 auto;
   max-width: 1024px;
 }
 
- .search-box{
+.search-box {
   display: flex;
   justify-content: center;
 }
 
- .search-input{
+.search-input {
   margin-right: 2rem;
 }
 
- .btn{
+.btn {
   color: var(--white);
   background: var(--primary-color);
   padding: 0.75rem 3rem;
@@ -77,14 +82,20 @@
   cursor: pointer;
 }
 
- .cards{
+.cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
- .card{
+.card {
   display: flex;
   flex-direction: column;
   padding: 1rem 0.75rem;
+}
+
+.backgroundIndex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

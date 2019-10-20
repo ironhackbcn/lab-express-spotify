@@ -5,23 +5,23 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const hbs = require('hbs');
 
-// require spotify-web-api-node package here:
-
 const indexRouter = require('./routes/index');
 
  const app = express();
+
+hbs.registerPartials(__dirname + '/views/partials');
 
  // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
- app.use(logger('dev'));
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
- app.use('/', indexRouter);
+app.use('/', indexRouter);
 
  // catch 404 and forward to error handler
 app.use((req, res, next) => {
@@ -40,3 +40,7 @@ app.use((err, req, res, next) => {
 });
 
  module.exports = app;
+
+app.listen(3000, () => { //inicializar siempre esto para que podamos iniciar el servidor en este puerto
+  console.log('app listening on port 3000!');
+})

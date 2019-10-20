@@ -1,0 +1,16 @@
+<div class="card">
+  <div class="card-a-panel">
+    <div class="card-title">
+      <h2>{{name}}</h2>
+    </div>
+    <div class="albums-btn" onclick="window.location.href='/tracks/{{id}}'">View Tracks<i
+        class="fas fa-arrow-alt-circle-right"></i></div>
+  </div>
+  <div class="card-b-panel">
+    {{#if images}}
+    <img src="{{images.1.url}}" alt="Cover of {{name}}" class="card-image">
+    {{else}}
+    <img src="/images/default-artist.png" alt="Placeholder album picture" class="card-image">
+    {{/if}}
+  </div>
+</div>

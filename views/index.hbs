@@ -1,9 +1,4 @@
-<section class="backgroundIndex">
-    <div>
-        <form method="GET" action="/artists">
-            <input type="search" placeholder="search" class="search-box" name="artist name">
-            <button type="submit" class="btn"> Search for an artist</button>
-        </form>
-    </div>
-    <h1>Welcome to {{title}}</h1>
-</section>
+<form class="search-box" action="/artists" method="GET">
+    <input class="search-input" name="artist" type="text" placeholder="Search an artist" >
+    <button class="artistbutton" type="submit" class="btn"> Search for an artist</button>
+</form>

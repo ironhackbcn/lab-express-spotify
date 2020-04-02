@@ -1,0 +1,9 @@
+<div class="card">
+    {{#if this.images}}
+    <img src={{this.images.0.url}}>
+    {{else}}
+    <img src="/images/default-image.jpg">
+    {{/if}}
+    <h3 class="card-title">{{name}}</h3>
+    <a href="/albums/{{this.id}}" class="btn">View Albums</a>
+</div>

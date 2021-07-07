@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+.index {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://www.themjrgroup.com/admin/wp-content/uploads/2018/09/mjr-venues-audience-shot-outdoor-1300x866.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  height: 30%;
+  display: flex;   
+  justify-content: center;
+  align-items: center;  
+}
+
+form {
+  width: 60%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, form button {
+  margin: 0 auto;
+}
+
+form input {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 20px;
+}
+
+.button {
+  background: #FA6863;
+  color: white;
+  border: none;
+  width: 40%;
+  height: 40%;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.cards {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;  
+  flex-wrap: wrap;
+  margin: 100px auto;
+}
+
+.cards img {  
+  width: 100%;
+  height: 90%;    
+}
+
+.inside-cards {
+  width: 30%;
+  height: 50%;  
+  background: #4D4D4D;
+  margin-bottom: 30px;
+}
+
+.cards-description {
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;    
+}
+
+.album {
+  margin-bottom: 15px;
+  width: 30%;
+  border-radius: 5px;
+}
+
+.name {
+  margin: 2px 0 10px;
+}
+
+.tracks-title {
+  background: #4D4D4D;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px; 
+}
+
+.tracks {
+  display: flex;  
+  flex-wrap: wrap;  
+  width: 60%;
+  margin: 100px auto;
+}
+
+.inside-tracks {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  margin-bottom: 10px;
+}
+
+.p-track {
+  color: #4D4D4D;  
+  font-size: 20px;
+}
+
+
+

@@ -1,0 +1,12 @@
+{{#if artists}}
+  <section class="artists">
+    {{#each artists}}
+      <article class="card">
+        {{> card}}
+        <a href="/albums/{{id}}" class="card-btn">View Albums</a>
+      </article>
+    {{/each}}
+  </section>
+{{else}}
+  <h2 class="not-found">No artist found</h2>
+{{/if}}

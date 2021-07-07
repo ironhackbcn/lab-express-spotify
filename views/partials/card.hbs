@@ -1,0 +1,8 @@
+<div class="image-container">
+  {{#if images.[0].url}}
+    <img src="{{images.[0].url}}" alt="Artist image">
+  {{else}}
+    <img src="images/default-image.jpg" alt="Default artist image">
+  {{/if}}
+</div>
+<h2>{{name}}</h2>
